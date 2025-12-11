@@ -28,7 +28,7 @@ export default function AboutSection() {
             `}
           >
             <img
-              src="/logo.jpeg"
+              src="/Banner/Banner1.png"
               className="w-full h-[420px] md:h-[480px] object-cover rounded-[120px_0_120px_0] shadow-lg"
               alt="About Portusphare Global Trade LLP"
             />
@@ -43,7 +43,7 @@ export default function AboutSection() {
             `}
           >
             <img
-              src="/logo.jpeg"
+              src="/Farmer.png"
               className="w-56 h-56 md:w-64 md:h-64 rounded-full object-cover shadow-xl border-4 border-white"
               alt="Indian agriculture and farmer support"
             />

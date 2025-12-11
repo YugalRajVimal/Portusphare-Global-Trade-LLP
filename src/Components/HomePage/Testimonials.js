@@ -3,13 +3,11 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 import {
   Autoplay,
-  Navigation,
   Pagination,
   A11y,
 } from "swiper/modules";
 
 import "swiper/css";
-import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 /**
@@ -54,7 +52,6 @@ export default function TestimonialComponent() {
       stars: 5,
     },
   ];
-
 
   // To track swipe direction for animating entrance/exit
   const [current, setCurrent] = useState(0);
@@ -104,15 +101,14 @@ export default function TestimonialComponent() {
       <div className=" mt-32 mx-10  px-6 md:pl-[50%] relative z-10">
         <Swiper
           ref={swiperRef}
-          modules={[Autoplay, Pagination, Navigation, A11y]}
+          modules={[Autoplay, Pagination, A11y]}
           autoplay={{
-            delay: 4000,
+            delay: 2000, // autoplay every 2 sec
             disableOnInteraction: false,
             reverseDirection: true, // animate right-to-left
             pauseOnMouseEnter: true,
           }}
           loop={true}
-          navigation
           pagination={{
             clickable: true,
             dynamicBullets: true,
@@ -141,7 +137,6 @@ export default function TestimonialComponent() {
             </SwiperSlide>
           ))}
         </Swiper>
-
       </div>
     </section>
   );

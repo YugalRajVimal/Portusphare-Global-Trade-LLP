@@ -84,18 +84,17 @@ export default function WhyChooseUs() {
           <div className="relative flex-2 w-1/3 flex ">
  
 
-          {/* RIGHT COLUMN - Image */}
-          <div
-            className={`
+          {/* LEFT COLUMN - Image */}
+          <div className={`
                w-full
               transition-all duration-700 delay-500
               ${animate ? "opacity-100 " : "opacity-0"}
             `}
           >
             <img
-              src="/logo.jpeg"
+              src="/WhyChooseUs.png"
               alt="Why Choose Us"
-              className="rounded-xl shadow-xl w-full object-cover h-[500px]"
+              className="rounded-xl shadow-xl w-full object-cover"
             />
           </div>
           </div>

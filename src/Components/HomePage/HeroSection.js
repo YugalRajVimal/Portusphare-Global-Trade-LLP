@@ -10,19 +10,19 @@ import {
 
 const heroImages = [
   {
-    src: "/logo.jpeg",
+    src: "/Banner/Banner1.png",
     alt: "Fresh farm vegetables ready for export by Portusphare Global Trade LLP",
   },
   {
-    src: "/logo.jpeg",
+    src: "/Banner/Banner2.png",
     alt: "Fresh Indian tomatoes export",
   },
   {
-    src: "/logo.jpeg",
+    src: "/Banner/Banner1.png",
     alt: "Premium quality cauliflower ready for shipment",
   },
   {
-    src: "/logo.jpeg",
+    src: "/Banner/Banner2.png",
     alt: "Assorted peppers harvested and packed",
   },
 ];
@@ -217,8 +217,8 @@ export default function HeroSection() {
         {/* Hero Image With Decor */}
         <div
           className={`
-            relative group
-            w-full flex-1 flex justify-center md:block
+            relative group items-end
+            w-full flex-1 flex justify-end md:block
             transition-all duration-700 delay-300
             ${animate ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}
           `}
@@ -256,7 +256,9 @@ export default function HeroSection() {
                   : (imgIdx)]?.alt}
                 aria-hidden
                 className={`
-                  absolute left-0 top-0 w-full h-full object-contain rounded-2xl border-4 border-white/80 shadow-2xl
+                  absolute left-0 top-0 w-full h-full object-contain rounded-2xl
+                   border-4 border-white/80
+                    shadow-2xl
                   transition-all duration-300 ease-in
                   ${imgDirection === "forward"
                     ? "opacity-0 scale-90 translate-x-12 z-10"

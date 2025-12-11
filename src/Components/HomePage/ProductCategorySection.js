@@ -6,6 +6,7 @@ import {
   FaLeaf
 } from "react-icons/fa";
 
+// Corrected image URLs (pointing to public/product-images instead of /products)
 const productCategories = [
   {
     icon: <FaAppleAlt className="text-4xl text-lime-600" />,
@@ -21,7 +22,7 @@ const productCategories = [
       "Seasonal fruits",
     ],
     badge: "Fresh • Natural • Hygienic",
-    img: "/products/fruits.jpg",
+    img: "/Products/fruits.jpg",
   },
   {
     icon: <FaCarrot className="text-4xl text-lime-600" />,
@@ -40,7 +41,7 @@ const productCategories = [
       "Seasonal & leafy vegetables",
     ],
     badge: "Farm Fresh • Quality Assured",
-    img: "/products/vegetables.jpg",
+    img: "/Products/vegies.webp",
   },
   {
     icon: <FaSeedling className="text-4xl text-lime-600" />,
@@ -58,7 +59,7 @@ const productCategories = [
       "Spice blends",
     ],
     badge: "Pure • Aromatic • Chemical-free options available",
-    img: "/products/spices.jpg",
+    img: "/Products/spices.jpg",
   },
   {
     icon: <FaLeaf className="text-4xl text-lime-600" />,
@@ -75,7 +76,7 @@ const productCategories = [
       "Urad Dal",
     ],
     badge: "Nutrient-rich • Carefully Processed",
-    img: "/products/grains.jpg",
+    img: "/Products/pulces.jpeg",
   },
 ];
 
