@@ -93,7 +93,7 @@ export default function HeroSection() {
   ];
 
   return (
-    <section className="relative w-full min-h-[70vh] xs:min-h-[80vh] sm:min-h-[90vh] md:min-h-[97vh] mt-36  xs:mt-28 sm:mt-28 bg-gradient-to-b from-green-50 via-lime-50 to-white flex items-center overflow-hidden">
+    <section className="relative w-full min-h-[70vh] xs:min-h-[80vh] sm:min-h-[90vh] md:min-h-[97vh] mt-32  xs:mt-28 sm:mt-28 bg-gradient-to-b from-green-50 via-lime-50 to-white flex items-center overflow-hidden">
       {/* Background Decorative Circle - responsive sizing and placing */}
       <div
         className={`
@@ -150,7 +150,7 @@ export default function HeroSection() {
         ))}
       </div>
       {/* Social Bar for mobile - bottom center */}
-      <div className="md:hidden absolute bottom-6 left-1/2 -translate-x-1/2 flex flex-row gap-6 xs:gap-8 text-gray-500 z-20">
+      {/* <div className="md:hidden absolute bottom-6 left-1/2 -translate-x-1/2 flex flex-row gap-6 xs:gap-8 text-gray-500 z-20">
         {socialIcons.map((item, i) => (
           <a
             key={i}
@@ -164,15 +164,15 @@ export default function HeroSection() {
             <span className="hidden sm:inline ml-1 text-xs font-medium tracking-wider group-hover:font-semibold">{item.label}</span>
           </a>
         ))}
-      </div>
+      </div> */}
 
       {/* Main Content */}
-      <div className="relative z-10 w-full max-w-7xl mx-10 md:mx-20 px-2 xs:px-4 sm:px-6 flex flex-col md:flex-row items-center gap-8 sm:gap-12 md:gap-16">
+      <div className="relative z-10 w-full max-w-7xl mx-10 md:mx-20 px-2 xs:px-4 sm:px-6 flex flex-col-reverse md:flex-row items-center gap-8 sm:gap-12 md:gap-16">
         {/* Textual Content */}
         <div
           className={`
             flex-1 flex flex-col gap-5 sm:gap-6 md:gap-7
-            w-full max-w-[540px] sm:max-w-xl pt-10 xs:pt-14 md:pt-0
+            w-full max-w-[540px] sm:max-w-xl md:pt-10 xs:pt-14 md:pt-0
             transition-all duration-700 delay-200
             ${animate ? "opacity-100 translate-y-0" : "opacity-0 translate-y-7"}
           `}
@@ -218,7 +218,8 @@ export default function HeroSection() {
         <div
           className={`
             relative group items-end
-            w-full flex-1 flex justify-end md:block
+            mt-4 md:mt-0
+            w-full flex-1 flex justify-center md:justify-end md:block
             transition-all duration-700 delay-300
             ${animate ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}
           `}
