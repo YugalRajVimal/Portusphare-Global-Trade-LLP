@@ -1,25 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import Navbar from './Components/NavBar'
+import LandingPage from './Pages/LandingPage'
+import "swiper/css";
+import Footer from './Components/Footer';
+// import "swiper/css/effect-fade";
 
-function App() {
+
+
+const About = () => <div>About Page</div>
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <>
+      <Navbar/>
+      <Router>
+        <Routes>
+          <Route path="/" element={<LandingPage />} />
+          <Route path="/about" element={<About />} />
+        </Routes>
+      </Router>
+      <Footer />
+    </>
+  )
 }
 
-export default App;
+export default App
