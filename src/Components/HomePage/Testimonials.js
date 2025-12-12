@@ -27,7 +27,7 @@ export default function TestimonialComponent() {
       img: "https://randomuser.me/api/portraits/men/32.jpg",
       clientName: "Abdul Rahman",
       role: "Importer, UAE",
-      text: "Excellent quality and timely shipments from Portusphare. Produce always arrives fresh and as promised.",
+      text: "Excellent quality and timely shipments from Portusphere. Produce always arrives fresh and as promised.",
       stars: 5,
     },
     {
@@ -74,16 +74,16 @@ export default function TestimonialComponent() {
   };
 
   return (
-    <section className="relative pt-16  pb-48 bg-gradient-to-b from-white to-[#f3ffe7] overflow-hidden">
+    <section className="relative pt-16  pb-20 md:pb-48 bg-gradient-to-b from-white to-[#f3ffe7] overflow-hidden">
       {/* Left concentric circle visuals */}
-      <div className="absolute left-0 top-1/2 mt-24 ml-10 -translate-y-1/2 hidden md:block">
+      <div className="absolute left-0 top-1/2 mt-24 md:ml-10 -translate-y-1/2 hidden md:block">
         <OrbitalClients />
       </div>
 
       {/* Heading */}
       <div
         className={`
-          text-center mb-16 transition-all duration-700
+          text-center mb-8 md:mb-16 transition-all duration-700
           ${animate ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}
         `}
       >
@@ -98,7 +98,7 @@ export default function TestimonialComponent() {
       </div>
 
       {/* Swiper */}
-      <div className=" mt-32 mx-10  px-6 md:pl-[50%] relative z-10">
+      <div className=" mt-10 md:mt-32 mx-4 md:mx-10  px-2 md:px-6 md:pl-[50%] relative z-10">
         <Swiper
           ref={swiperRef}
           modules={[Autoplay, Pagination, A11y]}

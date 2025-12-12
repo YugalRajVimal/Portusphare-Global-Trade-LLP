@@ -5,14 +5,20 @@ import WhyChooseUs from '../Components/HomePage/WhyChooseUs'
 import ProductCategorySection from '../Components/HomePage/ProductCategorySection'
 import TestimonialComponent from '../Components/HomePage/Testimonials'
 import CTAInquirySection from '../Components/HomePage/InquirySection'
+import FarmerUpliftment from '../Components/HomePage/FarmerUpliftment'
+import DomesticGlobalMarkets from '../Components/HomePage/DomesticAndGlobalMarkets'
 
 const LandingPage = () => {
   return (
-    <div>
+    <div className=' '>
         <HeroSection />
         <AboutSection />
+    
         <WhyChooseUs />
+        <FarmerUpliftment />
+
         <ProductCategorySection />
+        <DomesticGlobalMarkets />
 <TestimonialComponent />
 <CTAInquirySection />
     </div>

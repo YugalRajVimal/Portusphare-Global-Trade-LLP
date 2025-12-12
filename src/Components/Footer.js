@@ -37,10 +37,10 @@ export default function Footer() {
           `}
         >
           <div className="flex flex-col items-start gap-3 mb-4">
-            <img src="/logo.jpeg" className="h-24" alt="Portusphare Global Trade LLP Logo" />
+            <img src="/logo.jpeg" className="h-24" alt="Portusphere Global Trade LLP Logo" />
             <div>
               <h2 className="text-2xl md:text-3xl font-extrabold leading-tight">
-                Portusphare Global Trade LLP
+                Portusphere Global Trade LLP
               </h2>
               <span className="inline-block text-xs text-lime-300 mt-1">
                 Fresh Produce & Agri Exports
@@ -199,7 +199,7 @@ export default function Footer() {
         <div className="relative z-10 max-w-7xl mx-auto px-6 py-6 text-gray-300 text-xs md:text-sm flex flex-col md:flex-row justify-between items-center">
           <div className="mb-3 md:mb-0">
             <span className="font-bold text-lime-400">
-              Portusphare Global Trade LLP
+              Portusphere Global Trade LLP
             </span>{" "}
             | Fresh Indian Produce to the World
           </div>

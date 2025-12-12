@@ -11,7 +11,7 @@ import {
 const heroImages = [
   {
     src: "/Banner/Banner1.png",
-    alt: "Fresh farm vegetables ready for export by Portusphare Global Trade LLP",
+    alt: "Fresh farm vegetables ready for export by Portusphere Global Trade LLP",
   },
   {
     src: "/Banner/Banner2.png",
@@ -93,7 +93,7 @@ export default function HeroSection() {
   ];
 
   return (
-    <section className="relative w-full min-h-[70vh] xs:min-h-[80vh] sm:min-h-[90vh] md:min-h-[97vh] mt-32  xs:mt-28 sm:mt-28 bg-gradient-to-b from-green-50 via-lime-50 to-white flex items-center overflow-hidden">
+    <section className="relative w-full min-h-[70vh] xs:min-h-[80vh] sm:min-h-[90vh] md:min-h-[97vh] mt-16  xs:mt-28 sm:mt-28 bg-gradient-to-b from-green-50 via-lime-50 to-white flex items-center overflow-hidden">
       {/* Background Decorative Circle - responsive sizing and placing */}
       <div
         className={`
@@ -180,24 +180,19 @@ export default function HeroSection() {
           <div className="flex items-center gap-2 mb-1">
             <span className="w-7 sm:w-8 h-1 bg-lime-400 rounded-md inline-block" />
             <span className="uppercase text-[11px] sm:text-xs tracking-wider font-semibold text-lime-600">
-              Fresh From India
+              Welcome
             </span>
           </div>
           <h1 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl font-extrabold text-green-900 leading-tight drop-shadow-sm">
-            Fresh Vegetables <span className="text-lime-600">From India <br className="hidden sm:block" /> to the World</span>
+            Welcome to <span className="text-lime-600">Portusphere Global Trade LLP</span>
           </h1>
           <p className="text-base xs:text-lg text-gray-700/90 max-w-lg">
-            Portusphare Global Trade LLP is a trusted vegetable export company delivering premium-quality, chemical-safe, and naturally grown produce to global markets.<br className="hidden xs:inline" />
+            At Portusphere Global Trade LLP, we connect India’s rich agricultural heritage with markets across the globe. With a strong network of trusted farmers and modern supply-chain practices, we deliver premium-quality Indian Spices, Vegetables, Grains, and Fresh Produce to domestic and international customers.
+            <br className="hidden xs:inline" />
             <span className="inline-block mt-2">
-            With strong partnerships across farming communities, we ensure purity, freshness, and timely deliveries—every time.
+              Our mission is simple: empowering farmers, ensuring quality, and serving the world with authentic Indian food products.
             </span>
           </p>
-          <ul className="grid grid-cols-2 gap-2 mt-3 text-green-800 text-sm font-medium max-w-[350px]">
-            <li className="flex items-center gap-2"><span className="text-lime-500 text-lg">✔</span> Quality</li>
-            <li className="flex items-center gap-2"><span className="text-lime-500 text-lg">✔</span> Transparency</li>
-            <li className="flex items-center gap-2"><span className="text-lime-500 text-lg">✔</span> Sustainability</li>
-            <li className="flex items-center gap-2"><span className="text-lime-500 text-lg">✔</span> Farmer Empowerment</li>
-          </ul>
           <div className="flex flex-col xs:flex-row gap-4 mt-4 w-full">
             <a
               href="#contact"

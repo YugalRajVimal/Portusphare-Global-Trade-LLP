@@ -17,8 +17,8 @@ export default function CTAInquirySection() {
   }, []);
 
   return (
-    <section className="py-20 bg-gradient-to-b from-white to-[#f4fff2]">
-      <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-14 items-start">
+    <section className="pb-10 px-4 pt-10 ">
+      <div className="max-w-7xl mx-auto px-2 md:px-6 grid lg:grid-cols-2 gap-14 items-start">
 
         {/* LEFT SIDE */}
         <div
@@ -39,21 +39,21 @@ export default function CTAInquirySection() {
           {/* CONTACT INFO */}
           <div className="space-y-5">
             <div className="flex items-start gap-4">
-              <FaMapMarkerAlt className="w-8 h-8 text-lime-600" />
+              <FaMapMarkerAlt className="w-6 h-6 md:w-8 md:h-8 text-lime-600" />
               <p className="text-green-900 font-medium">
               B6/907, Supertech Eco Village -2 , Greater Noida West 
               </p>
             </div>
 
             <div className="flex items-start gap-4">
-              <FaPhoneAlt className="w-8 h-8 text-lime-600" />
+              <FaPhoneAlt className="w-6 h-6 md:w-8 md:h-8  text-lime-600" />
               <p className="text-green-900 font-medium">
               +91 95603 65050 
               </p>
             </div>
 
             <div className="flex items-start gap-4">
-              <FaEnvelope className="w-8 h-8 text-lime-600" />
+              <FaEnvelope className="w-6 h-6 md:w-8 md:h-8  text-lime-600" />
               <p className="text-green-900 font-medium">
                 support@domain.com
               </p>
@@ -99,7 +99,7 @@ export default function CTAInquirySection() {
         {/* RIGHT SIDE - FORM */}
         <div
           className={`
-            bg-white shadow-xl p-10 rounded-2xl transition-all duration-700 delay-200
+            bg-white shadow-xl p-4 md:p-10 rounded-2xl transition-all duration-700 delay-200
             ${animate ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}
           `}
         >

@@ -1,82 +1,71 @@
 import { useEffect, useState } from "react";
 import {
-  FaAppleAlt,
   FaCarrot,
   FaSeedling,
   FaLeaf
 } from "react-icons/fa";
 
-// Corrected image URLs (pointing to public/product-images instead of /products)
+// Update: Hide Fresh Fruits, update the rest per new copy
 const productCategories = [
   {
-    icon: <FaAppleAlt className="text-4xl text-lime-600" />,
-    title: "Fresh Fruits",
-    desc: "Handpicked from certified orchards with natural sweetness and export-grade quality.",
+    icon: <FaSeedling className="text-4xl text-lime-600" />,
+    title: "Indian Spices",
+    desc: "Authentic, aromatic, and rich in flavor.",
     highlights: [
-      "Mango",
-      "Banana",
-      "Pomegranate",
-      "Grapes",
-      "Papaya",
-      "Watermelon",
-      "Seasonal fruits",
+      "Turmeric",
+      "Red Chilli",
+      "Cumin",
+      "Coriander",
+      "Garam Masala Blends",
+      "Cardamom",
+      "Black Pepper",
+      "Mustard Seeds",
+      "Fennel Seeds",
+      "Fenugreek",
+      "And many more…",
     ],
-    badge: "Fresh • Natural • Hygienic",
-    img: "/Products/fruits.jpg",
+    extra: "We ensure clean processing, hygienic packaging, and export-grade standards.",
+    img: "/Products/spices.jpg",
+    badge: undefined,
   },
   {
     icon: <FaCarrot className="text-4xl text-lime-600" />,
     title: "Fresh Vegetables",
-    desc: "Harvested daily, graded, and delivered with maximum freshness.",
+    desc: "Sourced directly from farms, harvested at perfect maturity.",
     highlights: [
       "Onions",
       "Potatoes",
       "Tomatoes",
-      "Lemon",
-      "Green Chilies",
+      "Green Chillies",
+      "Okra",
       "Drumstick",
-      "Ladyfinger",
-      "Brinjal",
-      "Cabbage / Cauliflower",
-      "Seasonal & leafy vegetables",
+      "Lemon",
+      "Cabbage",
+      "Cauliflower",
+      "Seasonal Vegetables",
     ],
-    badge: "Farm Fresh • Quality Assured",
+    extra: "We maintain freshness through cold-chain logistics.",
     img: "/Products/vegies.webp",
-  },
-  {
-    icon: <FaSeedling className="text-4xl text-lime-600" />,
-    title: "Indian Spices",
-    desc: "Authentic flavors sourced directly from spice-growing regions.",
-    highlights: [
-      "Turmeric (whole & powder)",
-      "Red Chilli (whole & powder)",
-      "Cumin",
-      "Coriander",
-      "Black Pepper",
-      "Cardamom",
-      "Cloves",
-      "Fenugreek",
-      "Spice blends",
-    ],
-    badge: "Pure • Aromatic • Chemical-free options available",
-    img: "/Products/spices.jpg",
+    badge: undefined,
   },
   {
     icon: <FaLeaf className="text-4xl text-lime-600" />,
     title: "Grains & Pulses",
-    desc: "Clean, sorted, and supplied as per domestic and export specifications.",
+    desc: "Premium-quality Indian staples for bulk and retail buyers.",
     highlights: [
-      "Rice (Basmati / Non-Basmati)",
+      "Basmati Rice",
+      "Non-Basmati Rice",
       "Wheat",
       "Maize",
-      "Millet (Bajra / Jowar / Ragi)",
+      "Millet",
       "Toor Dal",
-      "Chana Dal",
       "Moong Dal",
+      "Chana Dal",
       "Urad Dal",
     ],
-    badge: "Nutrient-rich • Carefully Processed",
+    extra: "Packed with nutrition, purity, and consistency.",
     img: "/Products/pulces.jpeg",
+    badge: undefined,
   },
 ];
 
@@ -109,19 +98,20 @@ export default function ProductCategorySection() {
       </div>
 
       {/* PRODUCT CARDS */}
-      <div className="max-w-7xl mx-auto px-6 mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+      <div className="max-w-7xl mx-auto px-6 mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
         {productCategories.map((cat, i) => (
           <div
             key={cat.title}
             className={`
-              bg-white rounded-2xl shadow-xl p-8 pt-12 relative flex flex-col group overflow-hidden
+              bg-white rounded-2xl shadow-xl p-8 pt-12 relative flex flex-col justify-between group overflow-hidden
               transition-all duration-700
               ${animate ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}
             `}
             style={{ transitionDelay: `${200 + i * 120}ms` }}
           >
-            {/* IMAGE (decorative, optional, fallback to icon) */}
-            <div className="relative mb-8 w-full flex justify-center items-center">
+            <div>
+ {/* IMAGE (decorative, optional, fallback to icon) */}
+ <div className="relative mb-8 w-full flex justify-center items-center">
               <div className="w-20 h-20 rounded-full bg-lime-50 flex items-center justify-center shadow-lg overflow-hidden">
                 {cat.img
                   ? <img src={cat.img} alt={cat.title} className="object-cover w-20 h-20" />
@@ -139,8 +129,18 @@ export default function ProductCategorySection() {
                 <li key={idx}>{item}</li>
               ))}
             </ul>
+            </div>
+            <div>
+            {cat.extra && (
+              <div className="text-gray-700 text-xs text-center mb-2">{cat.extra}</div>
+            )}
             <div className="flex-1"></div>
-            <div className="mt-4 text-xs text-lime-800 font-semibold text-center tracking-wide">{cat.badge}</div>
+            {cat.badge && (
+              <div className="mt-4 text-xs text-lime-800 font-semibold text-center tracking-wide">{cat.badge}</div>
+            )}
+            </div>
+           
+         
           </div>
         ))}
       </div>
