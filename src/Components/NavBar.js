@@ -191,7 +191,7 @@ export default function Navbar() {
           </div>
           <a onClick={()=>setMobileMenuOpen(false)} className="text-gray-800 text-lg font-medium hover:text-green-700" href="/">Home</a>
           <a onClick={()=>setMobileMenuOpen(false)} className="text-gray-800 text-lg font-medium hover:text-green-700" href="/about">About</a>
-          <a onClick={()=>setMobileMenuOpen(false)} className="text-gray-800 text-lg font-medium hover:text-green-700" href="#">Products</a>
+          <a onClick={()=>setMobileMenuOpen(false)} className="text-gray-800 text-lg font-medium hover:text-green-700" href="/products">Products</a>
           <a onClick={()=>setMobileMenuOpen(false)} className="text-gray-800 text-lg font-medium hover:text-green-700" href="/contact-us">Contact</a>
           <hr className="my-2"/>
           <button className="bg-lime-500 hover:bg-lime-600 text-white px-5 py-2 rounded-md font-semibold text-base transition shadow mt-2">
