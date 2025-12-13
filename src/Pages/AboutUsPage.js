@@ -107,7 +107,7 @@ export default function AboutUsPage() {
                 </a>
                 <div className="flex flex-col mt-2">
                   <p className="text-green-900 font-bold text-base sm:text-lg">Portusphere Global Trade LLP</p>
-                  <p className="text-gray-600 text-sm">B6/907, Supertech Eco Village -2,<br />Greater Noida West</p>
+                  <p className="text-gray-600 text-sm">B6/908, Supertech Eco Village -2,<br />Greater Noida West</p>
                   <a
                     href="tel:+919560365050"
                     className="text-lime-700 font-semibold text-sm leading-tight mt-1 hover:underline"

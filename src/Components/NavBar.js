@@ -48,7 +48,7 @@ export default function Navbar() {
       >
         <div className="max-w-7xl flex mx-auto h-full  flex-col sm:flex-row justify-between items-center justify-between gap-y-2">
           <div className="flex flex-wrap items-center gap-3 xs:gap-4 sm:gap-6 text-[11px] sm:text-sm  xs:w-auto justify-center xs:justify-start">
-            <span className="whitespace-nowrap">🏢 Reg add: B6/907, Supertech Eco Village -2, Greater Noida West</span>
+            <span className="whitespace-nowrap">🏢 Reg add: B6/908, Supertech Eco Village -2, Greater Noida West</span>
             <span className="whitespace-nowrap hidden xs:inline">✉️ Email: </span>
           </div>
           <nav className="hidden md:flex items-center gap-3 xs:gap-4 sm:gap-6 text-white/80">

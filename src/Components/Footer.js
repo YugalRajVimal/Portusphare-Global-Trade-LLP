@@ -141,7 +141,7 @@ export default function Footer() {
             <li className="flex gap-2 items-start">
               <FaHome className="mt-1 text-lime-400 shrink-0 text-lg" />
               <span>
-                B6/907, Supertech Eco Village-2,<br />
+                B6/908, Supertech Eco Village-2,<br />
                 Greater Noida West, India
               </span>
             </li>

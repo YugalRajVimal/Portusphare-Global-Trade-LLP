@@ -23,7 +23,7 @@ export default function CTAInquirySection() {
         {/* LEFT SIDE */}
         <div
           className={`
-            transition-all duration-700
+            transition-all duration-700 my-auto
             ${animate ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}
           `}
         >
@@ -41,7 +41,7 @@ export default function CTAInquirySection() {
             <div className="flex items-start gap-4">
               <FaMapMarkerAlt className="w-6 h-6 md:w-8 md:h-8 text-lime-600" />
               <p className="text-green-900 font-medium">
-              B6/907, Supertech Eco Village -2 , Greater Noida West 
+              B6/908, Supertech Eco Village -2 , Greater Noida West 
               </p>
             </div>
 
@@ -107,40 +107,68 @@ export default function CTAInquirySection() {
             Send Us a Message
           </h3>
 
-          <form className="space-y-6">
+          <form className="space-y-4">
             <div>
-              <label className="text-green-900 font-medium">Full Name</label>
+              <label className="text-green-900 font-medium">Name</label>
               <input
                 type="text"
-                className="w-full mt-2 p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-lime-500 outline-none"
+                className="w-full mt-1 p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-lime-500 outline-none"
                 placeholder="Enter your name"
               />
             </div>
 
             <div>
-              <label className="text-green-900 font-medium">Email Address</label>
+              <label className="text-green-900 font-medium">Mobile No</label>
               <input
-                type="email"
-                className="w-full mt-2 p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-lime-500 outline-none"
-                placeholder="Enter your email"
+                type="tel"
+                className="w-full mt-1 p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-lime-500 outline-none"
+                placeholder="Enter your mobile number"
               />
             </div>
 
             <div>
-              <label className="text-green-900 font-medium">Phone Number</label>
+              <label className="text-green-900 font-medium">Country</label>
               <input
                 type="text"
-                className="w-full mt-2 p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-lime-500 outline-none"
-                placeholder="Enter your phone number"
+                className="w-full mt-1 p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-lime-500 outline-none"
+                placeholder="Enter your country"
               />
             </div>
 
             <div>
-              <label className="text-green-900 font-medium">Message</label>
+              <label className="text-green-900 font-medium">Address</label>
+              <input
+                type="text"
+                className="w-full mt-1 p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-lime-500 outline-none"
+                placeholder="Enter your address"
+              />
+            </div>
+
+            {/* HSN Code Field */}
+            <div>
+              <label className="text-green-900 font-medium">HSN Code</label>
+              <input
+                type="text"
+                className="w-full mt-1 p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-lime-500 outline-none"
+                placeholder="Enter HSN Code"
+              />
+            </div>
+
+            <div>
+              <label className="text-green-900 font-medium">Product</label>
+              <input
+                type="text"
+                className="w-full mt-1 p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-lime-500 outline-none"
+                placeholder="Product you are interested in"
+              />
+            </div>
+
+            <div>
+              <label className="text-green-900 font-medium">Requirements or Message</label>
               <textarea
                 rows="5"
-                className="w-full mt-2 p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-lime-500 outline-none"
-                placeholder="Write your message..."
+                className="w-full mt-1 p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-lime-500 outline-none"
+                placeholder="Write your requirements or message..."
               ></textarea>
             </div>
 

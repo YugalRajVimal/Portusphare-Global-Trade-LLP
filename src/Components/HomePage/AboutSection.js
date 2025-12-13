@@ -115,7 +115,7 @@ export default function AboutSection() {
             </a>
             <div className="flex flex-col">
               <p className="text-green-900 font-bold text-lg">Portusphere Global Trade LLP</p>
-              <p className="text-gray-700 text-sm">B6/907, Supertech Eco Village -2, Greater Noida West</p>
+              <p className="text-gray-700 text-sm">B6/908, Supertech Eco Village -2, Greater Noida West</p>
               <a
                 href="tel:+919560365050"
                 className="text-lime-600 font-semibold text-sm mt-1 hover:underline"
