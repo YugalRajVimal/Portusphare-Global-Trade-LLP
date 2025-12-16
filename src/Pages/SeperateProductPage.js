@@ -47,15 +47,24 @@ export default function SeperateProductPage({
             {highlights && highlights.length > 0 && (
               <>
                 {/* <h2 className="text-lime-700 font-semibold mb-2">Highlights:</h2> */}
-                <div className="grid grid-cols-2 sm:grid-cols-3 gap-5 mb-8">
-                  {highlights.map((item, idx) => (
-                    <div
-                      key={idx}
-                      className="rounded-full border border-lime-200 bg-lime-50 text-green-900 text-base font-semibold px-6 py-4 text-center shadow-md hover:bg-lime-100 transition"
-                    >
-                      {item}
-                    </div>
-                  ))}
+                <div className=" gap-5 mb-8">
+                {highlights && highlights.length > 0 && (
+  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mb-8 w-full">
+    {highlights.map((item, idx) => (
+      <div
+        key={idx}
+        className="rounded-2xl border border-lime-200 bg-lime-50 px-5 py-4 text-center shadow-md hover:bg-lime-100 transition"
+      >
+        <h4 className="text-green-900 font-bold text-base mb-1">
+          {item.name}
+        </h4>
+        <p className="text-sm text-gray-600">{item.line1}</p>
+        <p className="text-sm text-gray-500">{item.line2}</p>
+      </div>
+    ))}
+  </div>
+)}
+
                 </div>
               </>
             )}
@@ -165,13 +174,7 @@ export default function SeperateProductPage({
 
 
 
-        {/* Section for more details, specs, etc, if needed */}
-        {/* 
-        <section className="mt-14">
-          <h2 className="text-2xl font-bold text-green-900 mb-4">Details</h2>
-          <p className="text-gray-600">More about the product goes here...</p>
-        </section>
-        */}
+ 
       </div>
     </main>
   );
