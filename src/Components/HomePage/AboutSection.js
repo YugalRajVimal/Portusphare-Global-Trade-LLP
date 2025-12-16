@@ -108,7 +108,7 @@ export default function AboutSection() {
           {/* CTA + Company Info */}
           <div className="flex flex-col md:flex-row items-start md:items-center gap-8 mt-10">
             <a
-              href="#contact"
+              href="/contact-us"
               className="bg-lime-500 hover:bg-lime-600 text-white font-semibold px-8 py-4 rounded-md shadow transition"
             >
               Contact Us &rarr;

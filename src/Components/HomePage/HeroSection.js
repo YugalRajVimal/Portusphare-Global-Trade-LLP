@@ -195,13 +195,13 @@ export default function HeroSection() {
           </p>
           <div className="flex flex-col xs:flex-row gap-4 mt-4 w-full">
             <a
-              href="#contact"
+              href="/contact-us"
               className="bg-lime-500 hover:bg-lime-600 active:bg-lime-700 transition text-white font-semibold px-5 xs:px-7 sm:px-8 py-3 xs:py-4 rounded-lg shadow-lg hover:scale-105 focus:outline-none focus:ring-2 focus:ring-lime-300 duration-400 text-base w-full xs:w-auto text-center"
             >
               Contact Us &rarr;
             </a>
             <a
-              href="#products"
+              href="/products"
               className="bg-white border-2 border-lime-500 text-lime-600 hover:bg-lime-100 hover:border-lime-600 transition rounded-lg font-semibold px-5 xs:px-7 py-3 xs:py-4 shadow-md duration-400 text-base w-full xs:w-auto text-center"
             >
               Explore Products

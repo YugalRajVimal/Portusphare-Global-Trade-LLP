@@ -100,7 +100,7 @@ export default function AboutUsPage() {
               </div>
               <div className="flex flex-col gap-3 sm:gap-1">
                 <a
-                  href="#contact"
+                  href="/contact-us"
                   className="bg-lime-600 hover:bg-lime-700 text-white font-semibold px-8 py-4 rounded-xl shadow-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-lime-300 text-lg"
                 >
                   Contact Us &rarr;

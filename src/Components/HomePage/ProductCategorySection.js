@@ -2,10 +2,11 @@ import { useEffect, useState } from "react";
 import {
   FaCarrot,
   FaSeedling,
-  FaLeaf
+  FaLeaf,
+  FaRegLemon,
 } from "react-icons/fa";
 
-// Update: Hide Fresh Fruits, update the rest per new copy
+// Add 'path' to allow link to each product page
 const productCategories = [
   {
     icon: <FaSeedling className="text-4xl text-lime-600" />,
@@ -27,6 +28,7 @@ const productCategories = [
     extra: "We ensure clean processing, hygienic packaging, and export-grade standards.",
     img: "/Products/spices.jpg",
     badge: undefined,
+    path: "/products/indian-spices",
   },
   {
     icon: <FaCarrot className="text-4xl text-lime-600" />,
@@ -47,6 +49,7 @@ const productCategories = [
     extra: "We maintain freshness through cold-chain logistics.",
     img: "/Products/vegies.webp",
     badge: undefined,
+    path: "/products/fresh-vegetables",
   },
   {
     icon: <FaLeaf className="text-4xl text-lime-600" />,
@@ -58,14 +61,33 @@ const productCategories = [
       "Wheat",
       "Maize",
       "Millet",
-      "Toor Dal",
-      "Moong Dal",
-      "Chana Dal",
-      "Urad Dal",
+      "Pulses",
     ],
     extra: "Packed with nutrition, purity, and consistency.",
     img: "/Products/pulces.jpeg",
     badge: undefined,
+    path: "/products/grains-pulses",
+  },
+  {
+    icon: <FaRegLemon className="text-4xl text-lime-600" />,
+    title: "Dry Fruits",
+    desc: "Finest quality dry fruits, handpicked for freshness and taste.",
+    highlights: [
+      "Cashew Nuts",
+      "Almonds",
+      "Pistachios",
+      "Raisins",
+      "Walnuts",
+      "Dried Figs",
+      "Dates",
+      "Apricots",
+      "Anjeer",
+      "Mixed Dry Fruit Packs",
+    ],
+    extra: "Hygienically packed to preserve natural nutrition and flavor.",
+    img: "/Products/dryfruits.jpg",
+    badge: undefined,
+    path: "/products/dry-fruits",
   },
 ];
 
@@ -98,7 +120,7 @@ export default function ProductCategorySection() {
       </div>
 
       {/* PRODUCT CARDS */}
-      <div className="max-w-7xl mx-auto px-6 mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+      <div className="max-w-7xl mx-auto px-6 mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10">
         {productCategories.map((cat, i) => (
           <div
             key={cat.title}
@@ -110,40 +132,62 @@ export default function ProductCategorySection() {
             style={{ transitionDelay: `${200 + i * 120}ms` }}
           >
             <div>
- {/* IMAGE (decorative, optional, fallback to icon) */}
- <div className="relative mb-8 w-full flex justify-center items-center">
-              <div className="w-20 h-20 rounded-full bg-lime-50 flex items-center justify-center shadow-lg overflow-hidden">
-                {cat.img
-                  ? <img src={cat.img} alt={cat.title} className="object-cover w-20 h-20" />
-                  : cat.icon}
-              </div>
-              {/* Optionally overlay icon above image */}
-              <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-                <span className="opacity-80">{cat.icon}</span>
-              </div>
-            </div>
-            <h3 className="text-green-900 font-extrabold text-xl text-center mb-2">{cat.title}</h3>
-            <p className="text-gray-600 text-center mb-4">{cat.desc}</p>
-            <ul className="text-green-700 text-sm mb-4 space-y-1 list-disc list-inside">
-              {cat.highlights.map((item, idx) => (
-                <li key={idx}>{item}</li>
-              ))}
-            </ul>
+              {/* IMAGE (decorative, optional, fallback to icon) */}
+              <a href={cat.path} className="block focus:outline-none focus:ring-2 focus:ring-lime-400 rounded-full">
+                <div className="relative mb-8 w-full flex justify-center items-center">
+                  <div className="w-20 h-20 rounded-full bg-lime-50 flex items-center justify-center shadow-lg overflow-hidden">
+                    {cat.img
+                      ? <img src={cat.img} alt={cat.title} className="object-cover w-20 h-20" />
+                      : cat.icon}
+                  </div>
+                  {/* Optionally overlay icon above image */}
+                  <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+                    <span className="opacity-80">{cat.icon}</span>
+                  </div>
+                </div>
+              </a>
+              <h3 className="text-green-900 font-extrabold text-xl text-center mb-2">
+                <a href={cat.path} className="hover:text-lime-700 transition-colors">{cat.title}</a>
+              </h3>
+              <p className="text-gray-600 text-center mb-4">{cat.desc}</p>
+              <ul className="text-green-700 text-sm mb-4 space-y-1 list-disc list-inside">
+                {cat.highlights.map((item, idx) => (
+                  <li key={idx}>{item}</li>
+                ))}
+              </ul>
             </div>
             <div>
-            {cat.extra && (
-              <div className="text-gray-700 text-xs text-center mb-2">{cat.extra}</div>
-            )}
-            <div className="flex-1"></div>
-            {cat.badge && (
-              <div className="mt-4 text-xs text-lime-800 font-semibold text-center tracking-wide">{cat.badge}</div>
-            )}
+              {cat.extra && (
+                <div className="text-gray-700 text-xs text-center mb-2">{cat.extra}</div>
+              )}
+              <div className="flex-1"></div>
+              {cat.badge && (
+                <div className="mt-4 text-xs text-lime-800 font-semibold text-center tracking-wide">{cat.badge}</div>
+              )}
             </div>
-           
-         
+            <div className="mt-6 flex justify-center">
+              <a
+                href={cat.path}
+                className="rounded-full bg-lime-500 hover:bg-lime-600 text-white font-semibold px-6 py-2 text-sm shadow transition mr-2"
+              >
+                View {cat.title}
+              </a>
+             
+            </div>
           </div>
         ))}
+
+
+
       </div>
+      <div className="flex justify-center mt-10 mx-auto">
+  <a
+    href="/products"
+    className="rounded-full mx-auto border-2 border-lime-500 text-lime-700 px-10 py-4 font-bold text-lg bg-white hover:bg-lime-50 transition shadow-lg w-full max-w-xs text-center"
+  >
+    All Products
+  </a>
+</div>
     </section>
   );
 }

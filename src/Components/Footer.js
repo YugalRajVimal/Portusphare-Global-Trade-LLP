@@ -87,7 +87,7 @@ export default function Footer() {
               </a>
             </li>
             <li>
-              <a href="#products" className="flex items-center gap-2 hover:text-lime-400 transition">
+              <a href="/products" className="flex items-center gap-2 hover:text-lime-400 transition">
                 <FaBoxOpen className="text-lg"/> Products
               </a>
             </li>
@@ -113,11 +113,27 @@ export default function Footer() {
         >
           <h3 className="text-xl font-extrabold mb-6">Our Exports</h3>
           <ul className="space-y-3 text-gray-200 text-sm">
-            <li>Fresh Vegetables: Onion, Potato, Green Chilli, Lemon, Drumstick</li>
-            <li>Fresh Fruits: Mango, Pomegranate, Banana</li>
-            <li>Indian Spices: Turmeric, Chilli, Cumin, Coriander</li>
-            <li>Grains & Pulses: Rice, Wheat, Dal</li>
-            <li>Custom Bulk Orders & Packaging</li>
+            <li>
+              <a href="/products/fresh-vegetables" className="underline hover:text-lime-400 transition font-semibold">
+                Fresh Vegetables
+              </a>: Onion, Potato, Green Chilli, Lemon, Drumstick
+            </li>
+            <li>
+              <a href="/products/fresh-fruits" className="underline hover:text-lime-400 transition font-semibold">
+                Fresh Fruits
+              </a>: Mango, Pomegranate, Banana
+            </li>
+            <li>
+              <a href="/products/indian-spices" className="underline hover:text-lime-400 transition font-semibold">
+                Indian Spices
+              </a>: Turmeric, Chilli, Cumin, Coriander
+            </li>
+            <li>
+              <a href="/products/grains-pulses" className="underline hover:text-lime-400 transition font-semibold">
+                Grains & Pulses
+              </a>: Rice, Wheat, Dal
+            </li>
+         
           </ul>
         </div>
 

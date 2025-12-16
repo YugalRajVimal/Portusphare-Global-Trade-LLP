@@ -1,5 +1,5 @@
-import { useEffect, useState } from "react";
-import { FaSearch, FaFacebookF, FaTwitter, FaLinkedinIn, FaBars, FaTimes } from "react-icons/fa";
+import { useEffect, useState, useRef } from "react";
+import { FaSearch, FaFacebookF, FaTwitter, FaLinkedinIn, FaBars, FaTimes, FaChevronDown } from "react-icons/fa";
 import { FaRegComments } from "react-icons/fa6";
 
 export default function Navbar() {
@@ -7,6 +7,17 @@ export default function Navbar() {
   const [lastScroll, setLastScroll] = useState(0);
   const [animate, setAnimate] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [desktopProductsOpen, setDesktopProductsOpen] = useState(false);
+  const [mobileProductsOpen, setMobileProductsOpen] = useState(false);
+
+  const productsLinks = [
+    { label: "Indian Spices", href: "/products/indian-spices" },
+    { label: "Fresh Vegetables", href: "/products/fresh-vegetables" },
+    { label: "Grains & Pulses", href: "/products/grains-pulses" },
+    { label: "Dry Fruits", href: "/products/dry-fruits" },
+  ];
+
+  const productsMenuRef = useRef(null);
 
   useEffect(() => {
     // Trigger initial animation once component mounts
@@ -14,12 +25,9 @@ export default function Navbar() {
 
     const handleScroll = () => {
       const current = window.scrollY;
-
       if (current > lastScroll && current > 80) {
-        // Scrolling down → hide top bar
         setShowTop(false);
       } else {
-        // Scrolling up → show top bar
         setShowTop(true);
       }
       setLastScroll(current);
@@ -37,6 +45,22 @@ export default function Navbar() {
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
+
+  // Outside click for desktop dropdown
+  useEffect(() => {
+    function handleClickOutside(event) {
+      if (
+        productsMenuRef.current &&
+        !productsMenuRef.current.contains(event.target)
+      ) {
+        setDesktopProductsOpen(false);
+      }
+    }
+    if (desktopProductsOpen) {
+      document.addEventListener("mousedown", handleClickOutside);
+    }
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, [desktopProductsOpen]);
 
   return (
     <header className="w-full fixed top-0 left-0 z-50">
@@ -124,7 +148,52 @@ export default function Navbar() {
           <nav className="hidden md:flex items-center gap-6 xs:gap-8 sm:gap-10 text-gray-700 font-medium">
             <a className="hover:text-green-700" href="/">Home</a>
             <a className="hover:text-green-700" href="/about">About</a>
-            <a className="hover:text-green-700" href="/products">Products</a>
+            {/* Products dropdown */}
+            <div
+              className="relative"
+              ref={productsMenuRef}
+              onMouseEnter={() => setDesktopProductsOpen(true)}
+              onMouseLeave={() => setDesktopProductsOpen(false)}
+            >
+              <button
+                className="hover:text-green-700 flex items-center gap-1"
+                onClick={e => {
+                  e.preventDefault();
+                  setDesktopProductsOpen(v => !v);
+                }}
+                aria-haspopup="true"
+                aria-expanded={desktopProductsOpen}
+              >
+                Products{" "}
+                <FaChevronDown
+                  className={`transition-transform duration-200 ml-1 w-3 h-3 ${desktopProductsOpen ? "rotate-180" : ""}`}
+                />
+              </button>
+              {/* Desktop dropdown menu */}
+              {desktopProductsOpen && (
+                <div
+                  className="absolute left-0  min-w-[210px] bg-white border border-gray-200 rounded-lg shadow-lg pb-2 pt-4 z-50 transition"
+                  onClick={() => setDesktopProductsOpen(false)}
+                >
+                  <a
+                    href="/products"
+                    className="block px-5 py-2 text-gray-800 hover:bg-lime-50 hover:text-green-700 font-medium"
+                  >
+                    All Products
+                  </a>
+                  <div className="border-t my-1" />
+                  {productsLinks.map((prod) => (
+                    <a
+                      key={prod.href}
+                      href={prod.href}
+                      className="block px-5 py-2 text-gray-700 hover:bg-lime-50 hover:text-green-700"
+                    >
+                      {prod.label}
+                    </a>
+                  ))}
+                </div>
+              )}
+            </div>
             <a className="hover:text-green-700" href="/contact-us">Contact</a>
           </nav>
 
@@ -134,9 +203,12 @@ export default function Navbar() {
             <FaSearch className="w-5 h-5 sm:w-6 sm:h-6 text-green-900 cursor-pointer" />
 
             {/* CTA Button */}
-            <button className="bg-lime-500 hover:bg-lime-600 transition text-white text-xs sm:text-base px-4 sm:px-6 py-2 sm:py-3 rounded-md font-semibold">
+            <a
+              href="/contact-us"
+              className="bg-lime-500 hover:bg-lime-600 transition text-white text-xs sm:text-base px-4 sm:px-6 py-2 sm:py-3 rounded-md font-semibold"
+            >
               Get A Quote
-            </button>
+            </a>
 
             {/* Contact */}
             <div className="hidden md:flex items-center gap-2 sm:gap-3">
@@ -159,39 +231,75 @@ export default function Navbar() {
           onClick={() => setMobileMenuOpen(false)}
         />
        <nav
-  className={`
-    fixed top-0 right-0 w-5/6 xs:w-2/3 sm:w-1/2 max-w-xs 
-    h-screen shadow-xl z-40 transform
-    transition-transform duration-300 md:hidden
-    py-10 px-6 flex flex-col gap-8 overflow-y-auto bg-white/95
-    ${mobileMenuOpen ? "translate-x-0" : "translate-x-full"}
-  `}
-  aria-label="Mobile menu"
- 
->
+        className={`
+          fixed top-0 right-0 w-5/6 xs:w-2/3 sm:w-1/2 max-w-xs 
+          h-screen shadow-xl z-40 transform
+          transition-transform duration-300 md:hidden
+          py-10 px-6 flex flex-col gap-8 overflow-y-auto bg-white/95
+          ${mobileMenuOpen ? "translate-x-0" : "translate-x-full"}
+        `}
+        aria-label="Mobile menu"
+      >
 
           {/* Logo at top of mobile menu */}
           <div className="flex justify-between items-center gap-3 mb-6">
             <div className="flex items-center gap-2">
-            <img src="/logo.jpeg" alt="logo" className="h-10" />
-            <span className="font-bold text-green-900 text-lg">Portusphere</span>
+              <img src="/logo.jpeg" alt="logo" className="h-10" />
+              <span className="font-bold text-green-900 text-lg">Portusphere</span>
             </div>
-           
+
             <div className="md:hidden flex items-center z-40">
-            <button
-              className="p-2 rounded focus:outline-none text-green-900"
-              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              aria-label={mobileMenuOpen ? "Close Menu" : "Open Menu"}
-            >
-              {mobileMenuOpen
-                && <FaTimes className="w-7 h-7" />
-              }
-            </button>
-          </div>
+              <button
+                className="p-2 rounded focus:outline-none text-green-900"
+                onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                aria-label={mobileMenuOpen ? "Close Menu" : "Open Menu"}
+              >
+                {mobileMenuOpen
+                  && <FaTimes className="w-7 h-7" />
+                }
+              </button>
+            </div>
           </div>
           <a onClick={()=>setMobileMenuOpen(false)} className="text-gray-800 text-lg font-medium hover:text-green-700" href="/">Home</a>
           <a onClick={()=>setMobileMenuOpen(false)} className="text-gray-800 text-lg font-medium hover:text-green-700" href="/about">About</a>
-          <a onClick={()=>setMobileMenuOpen(false)} className="text-gray-800 text-lg font-medium hover:text-green-700" href="/products">Products</a>
+          {/* Products Link with expandable submenu */}
+          <div>
+            <button
+              className="flex items-center justify-between w-full text-gray-800 text-lg font-medium hover:text-green-700 focus:outline-none"
+              onClick={() => setMobileProductsOpen(v => !v)}
+              aria-haspopup="true"
+              aria-expanded={mobileProductsOpen}
+              style={{ userSelect: "none" }}
+              type="button"
+            >
+              <span>Products</span>
+              <FaChevronDown
+                className={`w-4 h-4 ml-2 transition-transform duration-200 ${mobileProductsOpen ? "rotate-180" : ""}`}
+              />
+            </button>
+            {mobileProductsOpen && (
+              <div className="ml-2 border-l border-lime-200 mt-2 pl-3 flex flex-col gap-1 py-2">
+                <a
+                  onClick={()=>setMobileMenuOpen(false)}
+                  className="text-gray-700 text-base hover:text-green-700 py-1"
+                  href="/products"
+                >
+                  All Products
+                </a>
+                <div className="h-px w-full bg-lime-100 my-1" />
+                {productsLinks.map((prod) => (
+                  <a
+                    key={prod.href}
+                    onClick={()=>setMobileMenuOpen(false)}
+                    className="text-gray-700 text-base hover:text-green-700 py-1"
+                    href={prod.href}
+                  >
+                    {prod.label}
+                  </a>
+                ))}
+              </div>
+            )}
+          </div>
           <a onClick={()=>setMobileMenuOpen(false)} className="text-gray-800 text-lg font-medium hover:text-green-700" href="/contact-us">Contact</a>
           <hr className="my-2"/>
           <button className="bg-lime-500 hover:bg-lime-600 text-white px-5 py-2 rounded-md font-semibold text-base transition shadow mt-2">

@@ -87,12 +87,21 @@ export default function CTAInquirySection() {
 
           {/* BUTTONS */}
           <div className="flex gap-4 mt-8">
-            <button className="bg-lime-600 text-white px-8 py-4 rounded-lg shadow-md font-semibold hover:bg-lime-700 transition">
+            <a
+              href="tel:+919560365050"
+              className="bg-lime-600 text-white px-8 py-4 rounded-lg shadow-md font-semibold hover:bg-lime-700 transition flex items-center justify-center"
+              rel="noopener noreferrer"
+            >
               Call Now
-            </button>
-            <button className="bg-white text-lime-600 px-8 py-4 rounded-lg shadow-md font-semibold hover:bg-lime-100 transition">
+            </a>
+            <a
+              href="https://www.google.com/maps/place/B6/908,+Supertech+Eco+Village+2,+Greater+Noida+West"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-white text-lime-600 px-8 py-4 rounded-lg shadow-md font-semibold hover:bg-lime-100 transition flex items-center justify-center"
+            >
               Get Directions
-            </button>
+            </a>
           </div>
         </div>
 
@@ -107,7 +116,7 @@ export default function CTAInquirySection() {
             Send Us a Message
           </h3>
 
-          <form className="space-y-4">
+          <form className="space-y-v                               ff                                                                                                                                                                                                                                                                                             4">
             <div>
               <label className="text-green-900 font-medium">Name</label>
               <input
@@ -172,7 +181,7 @@ export default function CTAInquirySection() {
               ></textarea>
             </div>
 
-            <button className="w-full bg-lime-600 text-white py-4 rounded-lg font-semibold hover:bg-lime-700 transition shadow-md">
+            <button className="w-full mt-4 bg-lime-600 text-white py-4 rounded-lg font-semibold hover:bg-lime-700 transition shadow-md">
               Submit Inquiry
             </button>
           </form>
