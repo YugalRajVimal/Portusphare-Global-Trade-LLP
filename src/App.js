@@ -8,6 +8,7 @@ import ContactUsPage from './Pages/ContactUsPage';
 import AboutUsPage from './Pages/AboutUsPage';
 import ProductsPage from './Pages/ProductsPage';
 import SeperateProductPage from './Pages/SeperateProductPage';
+import TextilePage from './Pages/TextilePage';
 
 // Per ProductsPage.js (context), productCategories:
 const productCategories = [
@@ -247,6 +248,7 @@ const App = () => {
           <Route path="/" element={<LandingPage />} />
           <Route path="/about" element={<AboutUsPage />} />
           <Route path="/products" element={<ProductsPage />} />
+          <Route path="/textile" element={<TextilePage />} />
           <Route path="/contact-us" element={<ContactUsPage />} />
 
           {/* Seperate product routes */}

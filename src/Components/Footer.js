@@ -10,6 +10,7 @@ import {
   FaBoxOpen,
   FaLeaf,
   FaUsers,
+  FaTshirt,
 } from "react-icons/fa";
 // Removed import { Link } from "react-router-dom"; to prevent TypeError
 
@@ -76,7 +77,6 @@ export default function Footer() {
           <h3 className="text-xl font-extrabold mb-6">Quick Links</h3>
           <ul className="space-y-3 text-gray-200">
             <li>
-              {/* Use <a> instead of <Link> */}
               <a href="/" className="flex items-center gap-2 hover:text-lime-400 transition">
                 <FaHome className="text-lg"/> Home
               </a>
@@ -84,6 +84,11 @@ export default function Footer() {
             <li>
               <a href="/about" className="flex items-center gap-2 hover:text-lime-400 transition">
                 <FaUsers className="text-lg"/> About
+              </a>
+            </li>
+            <li>
+              <a href="/textile" className="flex items-center gap-2 hover:text-lime-400 transition">
+                <FaTshirt className="text-lg" /> Textile &amp; Cloth Division
               </a>
             </li>
             <li>

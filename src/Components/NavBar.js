@@ -117,7 +117,7 @@ export default function Navbar() {
           ${animate ? "translate-y-0 opacity-100" : "-translate-y-10 opacity-0"}
         `}
       >
-        <div className="max-w-7xl mx-auto px-2 xs:px-4 sm:px-6 py-2 sm:py-2 flex items-center justify-between relative">
+        <div className=" mx-auto px-2 xs:px-4 sm:px-6 py-2 sm:py-2 flex items-center justify-between relative">
           {/* LOGO SECTION */}
           <div className="flex items-center gap-2 sm:gap-3">
             <img 
@@ -148,6 +148,9 @@ export default function Navbar() {
           <nav className="hidden md:flex items-center gap-6 xs:gap-8 sm:gap-10 text-gray-700 font-medium">
             <a className="hover:text-green-700" href="/">Home</a>
             <a className="hover:text-green-700" href="/about">About</a>
+            <a className="hover:text-green-700" href="/textile">
+              Textile &amp; Cloth Division
+            </a>
             {/* Products dropdown */}
             <div
               className="relative"
@@ -199,8 +202,7 @@ export default function Navbar() {
 
           {/* ACTIONS - Desktop */}
           <div className="hidden md:flex items-center gap-4 xs:gap-5 sm:gap-6">
-            {/* Search icon */}
-            <FaSearch className="w-5 h-5 sm:w-6 sm:h-6 text-green-900 cursor-pointer" />
+
 
             {/* CTA Button */}
             <a
@@ -262,6 +264,13 @@ export default function Navbar() {
           </div>
           <a onClick={()=>setMobileMenuOpen(false)} className="text-gray-800 text-lg font-medium hover:text-green-700" href="/">Home</a>
           <a onClick={()=>setMobileMenuOpen(false)} className="text-gray-800 text-lg font-medium hover:text-green-700" href="/about">About</a>
+          <a
+            onClick={()=>setMobileMenuOpen(false)}
+            className="text-gray-800 text-lg font-medium hover:text-green-700"
+            href="/textile"
+          >
+            Textile &amp; Cloth Division
+          </a>
           {/* Products Link with expandable submenu */}
           <div>
             <button
