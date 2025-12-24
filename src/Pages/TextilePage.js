@@ -182,9 +182,9 @@ export default function TextilePage() {
         {/* Helper for WhatsApp Lead Button */}
         {[
           {
-            name: "Sari",
+            name: "Sarees",
             img: "/sarees.jpeg",
-            alt: "Sari"
+            alt: "Sarees"
           },
           {
             name: "Blouse",
@@ -205,11 +205,6 @@ export default function TextilePage() {
             name: "Shawl",
             img: "/shawl.jpeg",
             alt: "Shawl"
-          },
-          {
-            name: "And many more",
-            img: null,
-            alt: "And many more"
           }
         ].map((product, idx) => {
           // WhatsApp phone number (with country code, but no '+')
@@ -234,7 +229,7 @@ export default function TextilePage() {
                 <img
                   src={product.img}
                   alt={product.alt}
-                  className="rounded-lg mb-3 w-32 h-32 object-cover border border-lime-100"
+                  className="rounded-lg mb-3  h-60 aspect-[1/1] object-cover border border-lime-100"
                   loading="lazy"
                 />
               ) : (
@@ -249,7 +244,7 @@ export default function TextilePage() {
                 rel="noopener noreferrer"
                 className="mt-4 inline-flex items-center px-4 py-2 bg-lime-500 text-white font-semibold rounded hover:bg-lime-600 transition-shadow shadow focus:outline-none"
               >
-                Enquire
+                Enquiry Now
               </a>
             </div>
           );
