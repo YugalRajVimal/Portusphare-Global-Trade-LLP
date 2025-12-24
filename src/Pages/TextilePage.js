@@ -3,7 +3,7 @@ import React from "react";
 export default function TextilePage() {
   return (
      
-    <section className="relative w-full  mt-16  pb-10  xs:mt-28 sm:mt-28 pt-10  overflow-hidden bg-gradient-to-b from-[#fcfefd] via-[#f5fce8] to-white">
+    <section className="relative w-full  mt-16  pb-10  xs:mt-28 sm:mt-28 pt-10  overflow-hidden bg-gradient-to-b from-[#fcfefd] via-[#f5fce8] to-white ">
     <div className="flex justify-center mb-8 px-4">
       <img
         src="/textileLogo.jpeg"
@@ -173,11 +173,11 @@ export default function TextilePage() {
           </p>
         </section>
       </div>
-    <section className="mt-12">
+    <section className="mt-12 px-4">
       <h3 className="text-3xl md:text-4xl font-bold text-lime-800 mb-6 text-center">
         Our Products
       </h3>
-      <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-3 max-w-4xl mx-auto">
+      <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-3 max-w-4xl gap-4 mx-auto ">
 
         {/* Helper for WhatsApp Lead Button */}
         {[
