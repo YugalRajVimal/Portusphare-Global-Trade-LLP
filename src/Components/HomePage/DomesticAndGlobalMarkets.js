@@ -9,7 +9,7 @@ export default function DomesticGlobalMarkets() {
   }, []);
 
   return (
-    <section className="py-24 bg-gradient-to-b from-white to-[#f7fff4] overflow-hidden">
+    <section className="pt-10 pb-24 bg-gradient-to-b from-white to-[#f7fff4] overflow-hidden">
       <div className="max-w-7xl mx-auto px-6">
 
         {/* HEADING */}

@@ -7,6 +7,7 @@ import TestimonialComponent from '../Components/HomePage/Testimonials'
 import CTAInquirySection from '../Components/HomePage/InquirySection'
 import FarmerUpliftment from '../Components/HomePage/FarmerUpliftment'
 import DomesticGlobalMarkets from '../Components/HomePage/DomesticAndGlobalMarkets'
+import HomeTextileSection from '../Components/HomePage/TextileDivision'
 
 const LandingPage = () => {
   return (
@@ -18,6 +19,7 @@ const LandingPage = () => {
         <FarmerUpliftment />
 
         <ProductCategorySection />
+        <HomeTextileSection />
         <DomesticGlobalMarkets />
 <TestimonialComponent />
 <CTAInquirySection />
