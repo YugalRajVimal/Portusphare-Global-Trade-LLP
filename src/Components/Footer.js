@@ -212,17 +212,26 @@ export default function Footer() {
 
       {/* BOTTOM BAR */}
       <div className="relative mt-10 border-t border-[#1e5535]">
-        {/* <img
-          src="/logo.jeg"
-          className="absolute bottom-0 w-full opacity-30"
-          alt=""
-        /> */}
         <div className="relative z-10 max-w-7xl mx-auto px-6 py-6 text-gray-300 text-xs md:text-sm flex flex-col md:flex-row justify-between items-center">
-          <div className="mb-3 md:mb-0">
-            <span className="font-bold text-lime-400">
-              Portusphere Global Trade LLP
-            </span>{" "}
-            | Fresh Indian Produce to the World
+          <div className="mb-3 md:mb-0 flex flex-col ">
+            <div>
+              <span className="font-bold text-lime-400">
+                Portusphere Global Trade LLP
+              </span>{" "}
+              | Fresh Indian Produce to the World
+            </div>
+
+            <div className="md:mt-0 text-gray-400">
+              Made with passion by{" "}
+              <a
+                href="https://gowappily.in"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-lime-300 font-semibold underline hover:text-lime-200"
+              >
+                GoWappily Infotech
+              </a>.
+            </div>
           </div>
           <div className="flex gap-4 mt-2 md:mt-0">
             <a href="/terms" className="hover:text-white transition cursor-pointer">
