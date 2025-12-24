@@ -4,6 +4,14 @@ export default function TextilePage() {
   return (
      
     <section className="relative w-full  mt-16  pb-10  xs:mt-28 sm:mt-28 pt-10  overflow-hidden bg-gradient-to-b from-[#fcfefd] via-[#f5fce8] to-white">
+    <div className="flex justify-center mb-8 px-4">
+      <img
+        src="/textileLogo.jpeg"
+        alt="Textile Division Banner"
+        className="mx-auto rounded-xl shadow-lg min-w-md  max-w-full h-auto"
+        style={{ maxHeight: "240px", objectFit: "cover" }}
+      />
+    </div>
        
     <div className="flex items-center gap-3 mb-6 justify-center text-center w-full">
       <span className="w-10 h-1.5 bg-lime-500 rounded-full inline-block" />
@@ -165,6 +173,89 @@ export default function TextilePage() {
           </p>
         </section>
       </div>
+    <section className="mt-12">
+      <h3 className="text-3xl md:text-4xl font-bold text-lime-800 mb-6 text-center">
+        Our Products
+      </h3>
+      <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-3 max-w-4xl mx-auto">
+
+        {/* Helper for WhatsApp Lead Button */}
+        {[
+          {
+            name: "Sari",
+            img: "/sarees.jpeg",
+            alt: "Sari"
+          },
+          {
+            name: "Blouse",
+            img: "/blouse.jpg",
+            alt: "Blouse"
+          },
+          {
+            name: "Lady Suit",
+            img: "/suit.jpg",
+            alt: "Lady Suit"
+          },
+          {
+            name: "Kurtis",
+            img: "/kurti.jpeg",
+            alt: "Kurtis"
+          },
+          {
+            name: "Shawl",
+            img: "/shawl.jpeg",
+            alt: "Shawl"
+          },
+          {
+            name: "And many more",
+            img: null,
+            alt: "And many more"
+          }
+        ].map((product, idx) => {
+          // WhatsApp phone number (with country code, but no '+')
+          const whatsappNumber = "+919560365050"; // TODO: Replace with your actual WhatsApp number
+          // Custom message
+          const msg =
+            product.name === "And many more"
+              ? encodeURIComponent("Hello, I am interested in learning more about your textile & cloth products at Portusphere Global Trade LLP.")
+              : encodeURIComponent(
+                  `Hello, I am interested in the "${product.name}" products from Textile & Cloth Division at Portusphere Global Trade LLP. Please provide more details.`
+                );
+          const waLink = `https://wa.me/${whatsappNumber}?text=${msg}`;
+          
+          return (
+            <div
+              key={idx}
+              className={`bg-white rounded-xl shadow p-4 flex flex-col items-center ${
+                product.name === "And many more" ? "justify-center" : ""
+              } transition hover:shadow-lg`}
+            >
+              {product.img ? (
+                <img
+                  src={product.img}
+                  alt={product.alt}
+                  className="rounded-lg mb-3 w-32 h-32 object-cover border border-lime-100"
+                  loading="lazy"
+                />
+              ) : (
+                <div className="flex items-center justify-center rounded-lg mb-3 w-32 h-32 bg-gradient-to-tr from-lime-100 to-lime-300 text-lime-700 text-5xl">
+                  <span>…</span>
+                </div>
+              )}
+              <span className="text-lime-900 font-semibold text-lg">{product.name}</span>
+              <a
+                href={waLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-4 inline-flex items-center px-4 py-2 bg-lime-500 text-white font-semibold rounded hover:bg-lime-600 transition-shadow shadow focus:outline-none"
+              >
+                Enquire
+              </a>
+            </div>
+          );
+        })}
+      </div>
+    </section>
     </section>
   );
 }
