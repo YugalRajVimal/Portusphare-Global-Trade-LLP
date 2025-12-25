@@ -8,31 +8,77 @@ import {
   FaWhatsapp,
 } from "react-icons/fa";
 
-const heroImages = [
+// Hero images now features both textile and agriculture products
+// Utility to shuffle an array (Fisher-Yates algorithm)
+function shuffleArray(arr) {
+  const array = [...arr];
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+  return array;
+}
+
+const heroImagesRaw = [
+  // New agriculture images
   {
     src: "/Banner/Banner1.png",
-    alt: "Fresh farm vegetables ready for export by Portusphere Global Trade LLP",
+    alt: "Fresh Indian agri products ready for export - fruits, vegetables, pulses from Portusphere Global Trade LLP",
+    division: "Agriculture",
   },
   {
     src: "/Banner/Banner2.png",
-    alt: "Fresh Indian tomatoes export",
+    alt: "Premium Indian agriculture assortment prepared for shipment to global markets",
+    division: "Agriculture",
+  },
+  // New textile images
+  {
+    src: "/textile.jpg",
+    alt: "Colorful Indian textiles and fabrics presented for export by Portusphere Global Trade LLP",
+    division: "Textile",
   },
   {
-    src: "/Banner/Banner1.png",
-    alt: "Premium quality cauliflower ready for shipment",
+    src: "/textile.webp",
+    alt: "Quality textile manufacturing - modern Indian looms and fabrics for overseas buyers",
+    division: "Textile",
   },
   {
-    src: "/Banner/Banner2.png",
-    alt: "Assorted peppers harvested and packed",
+    src: "/textile2.webp",
+    alt: "Assorted cotton and blended textiles ready for global shipment",
+    division: "Textile",
+  },
+  {
+    src: "/textile3.jpg",
+    alt: "Traditional and modern Indian textiles and garments, manufactured for export",
+    division: "Textile",
+  },
+  // Existing textile images
+  {
+    src: "/textile.jpg",
+    alt: "High-quality Indian textile fabrics ready for global export by Portusphere Global Trade LLP",
+    division: "Textile",
+  },
+  {
+    src: "/textile2.webp",
+    alt: "Premium cotton yarn and fabrics exported internationally",
+    division: "Textile",
+  },
+  {
+    src: "/textile3.jpg",
+    alt: "Textile manufacturing and modern looms at Portusphere facilities",
+    division: "Textile",
   },
 ];
+
+// On each page load, shuffle the images once
+const heroImages = shuffleArray(heroImagesRaw);
 
 export default function HeroSection() {
   const [animate, setAnimate] = useState(false);
 
   // Dynamic image state and animation direction
   const [imgIdx, setImgIdx] = useState(0);
-  const [imgDirection, setImgDirection] = useState("forward"); // or "backward"
+  const [imgDirection, setImgDirection] = useState("forward");
   const [imgChanging, setImgChanging] = useState(false);
   const imgTimeout = useRef();
 
@@ -43,7 +89,7 @@ export default function HeroSection() {
 
   // Auto-rotate hero image
   useEffect(() => {
-    if (imgChanging) return; // Pause auto-advance during animation
+    if (imgChanging) return;
     imgTimeout.current = setTimeout(() => {
       handleImgChange(1);
     }, 3500);
@@ -60,7 +106,7 @@ export default function HeroSection() {
           ? (prev + 1) % heroImages.length
           : (prev - 1 + heroImages.length) % heroImages.length
       );
-      setTimeout(() => setImgChanging(false), 320); // match transition duration
+      setTimeout(() => setImgChanging(false), 320);
     }, 10);
   }
 
@@ -91,6 +137,81 @@ export default function HeroSection() {
       color: "hover:bg-green-50 hover:text-green-600",
     },
   ];
+
+  // Determine current division from imgIdx
+  const currentDivision = heroImages[imgIdx]?.division || "Textile";
+
+  // Custom content for division
+  const divisionData = {
+    Textile: {
+      badge: {
+        text: "Textile Division",
+        color: "bg-lime-400 text-lime-600",
+      },
+      heading:
+        <>
+          Welcome to <span className="text-lime-600">Portusphere Global Trade LLP</span>
+        </>,
+      description: (
+        <>
+          At Portusphere Global Trade LLP, our <b>Textile Division</b> is committed to delivering world-class Indian textiles to a diverse global clientele. We source, manufacture, and export an extensive range of fabrics, garments, cotton yarns, and home textiles—each reflecting India's rich legacy of craftsmanship and innovation.
+          <br className="hidden xs:inline" />
+          <span className="inline-block mt-2">
+            Our mission: empowering artisans, ensuring quality, and supplying the finest Indian textile solutions to businesses worldwide.
+          </span>
+        </>
+      ),
+      ctas: [
+        {
+          href: "/contact-us",
+          className:
+            "bg-lime-500 hover:bg-lime-600 active:bg-lime-700 transition text-white font-semibold px-5 xs:px-7 sm:px-8 py-3 xs:py-4 rounded-lg shadow-lg hover:scale-105 focus:outline-none focus:ring-2 focus:ring-lime-300 duration-400 text-base w-full xs:w-auto text-center",
+          text: "Contact Us →",
+        },
+        {
+          href: "/textile",
+          className:
+            "bg-white border-2 border-lime-500 text-lime-600 hover:bg-lime-100 hover:border-lime-600 transition rounded-lg font-semibold px-5 xs:px-7 py-3 xs:py-4 shadow-md duration-400 text-base w-full xs:w-auto text-center",
+          text: "Explore Textile Products",
+        },
+      ],
+    },
+    Agriculture: {
+      badge: {
+        text: "Agriculture Division",
+        color: "bg-green-300 text-green-700",
+      },
+      heading:
+        <>
+          Welcome to <span className="text-green-700">Portusphere Global Trade LLP</span>
+        </>,
+      description: (
+        <>
+          At Portusphere Global Trade LLP, our <b>Agriculture Division</b> specializes in exporting high-quality Indian agricultural products worldwide. We connect farms to global markets, delivering the finest fresh produce, spices, pulses, grains, and processed foods—each cultivated with a focus on safety, traceability, and taste.
+          <br className="hidden xs:inline" />
+          <span className="inline-block mt-2">
+            Our commitment: enabling sustainable growth, uplifting farming communities, and offering premium Indian farm goods to your doorstep—wherever you are.
+          </span>
+        </>
+      ),
+      ctas: [
+        {
+          href: "/contact-us",
+          className:
+            "bg-green-600 hover:bg-green-700 active:bg-green-800 transition text-white font-semibold px-5 xs:px-7 sm:px-8 py-3 xs:py-4 rounded-lg shadow-lg hover:scale-105 focus:outline-none focus:ring-2 focus:ring-green-300 duration-400 text-base w-full xs:w-auto text-center",
+          text: "Contact Us →",
+        },
+        {
+          href: "/agriculture",
+          className:
+            "bg-white border-2 border-green-600 text-green-700 hover:bg-green-50 hover:border-green-700 transition rounded-lg font-semibold px-5 xs:px-7 py-3 xs:py-4 shadow-md duration-400 text-base w-full xs:w-auto text-center",
+          text: "Discover Agriculture Products",
+        },
+      ],
+    },
+  };
+
+  const division = divisionData[currentDivision] || divisionData.Textile;
 
   return (
     <section className="relative w-full min-h-[70vh] xs:min-h-[80vh] sm:min-h-[90vh] md:min-h-[97vh] mt-16  xs:mt-28 sm:mt-28 bg-gradient-to-b from-green-50 via-lime-50 to-white flex items-center overflow-hidden">
@@ -150,21 +271,7 @@ export default function HeroSection() {
         ))}
       </div>
       {/* Social Bar for mobile - bottom center */}
-      {/* <div className="md:hidden absolute bottom-6 left-1/2 -translate-x-1/2 flex flex-row gap-6 xs:gap-8 text-gray-500 z-20">
-        {socialIcons.map((item, i) => (
-          <a
-            key={i}
-            href={item.link}
-            target="_blank"
-            rel="noopener noreferrer"
-            title={item.label}
-            className={`group flex items-center gap-1 rounded-full shadow-md transition px-2 py-2 bg-white/60 backdrop-blur-sm border border-lime-100 ${item.color.replace(/bg-[^\s]+/g, "")}`}
-          >
-            <span className="flex items-center">{item.icon}</span>
-            <span className="hidden sm:inline ml-1 text-xs font-medium tracking-wider group-hover:font-semibold">{item.label}</span>
-          </a>
-        ))}
-      </div> */}
+      {/* ...omitted for brevity... */}
 
       {/* Main Content */}
       <div className="relative z-10 w-full max-w-7xl mx-10 md:mx-20 px-2 xs:px-4 sm:px-6 flex flex-col-reverse md:flex-row items-center gap-8 sm:gap-12 md:gap-16">
@@ -178,34 +285,21 @@ export default function HeroSection() {
           `}
         >
           <div className="flex items-center gap-2 mb-1">
-            <span className="w-7 sm:w-8 h-1 bg-lime-400 rounded-md inline-block" />
-            <span className="uppercase text-[11px] sm:text-xs tracking-wider font-semibold text-lime-600">
-              Welcome
+            <span className={`w-7 sm:w-8 h-1 rounded-md inline-block ${division.badge.color.split(" ")[0]}`} />
+            <span className={`uppercase text-[11px] sm:text-xs tracking-wider font-semibold ${division.badge.color.split(" ").slice(1).join(" ")}`}>
+              {division.badge.text}
             </span>
           </div>
           <h1 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl font-extrabold text-green-900 leading-tight drop-shadow-sm">
-            Welcome to <span className="text-lime-600">Portusphere Global Trade LLP</span>
+            {division.heading}
           </h1>
-          <p className="text-base xs:text-lg text-gray-700/90 max-w-lg">
-            At Portusphere Global Trade LLP, we connect India’s rich agricultural heritage with markets across the globe. With a strong network of trusted farmers and modern supply-chain practices, we deliver premium-quality Indian Spices, Vegetables, Grains, and Fresh Produce to domestic and international customers.
-            <br className="hidden xs:inline" />
-            <span className="inline-block mt-2">
-              Our mission is simple: empowering farmers, ensuring quality, and serving the world with authentic Indian food products.
-            </span>
-          </p>
+          <p className="text-base xs:text-lg text-gray-700/90 max-w-lg">{division.description}</p>
           <div className="flex flex-col xs:flex-row gap-4 mt-4 w-full">
-            <a
-              href="/contact-us"
-              className="bg-lime-500 hover:bg-lime-600 active:bg-lime-700 transition text-white font-semibold px-5 xs:px-7 sm:px-8 py-3 xs:py-4 rounded-lg shadow-lg hover:scale-105 focus:outline-none focus:ring-2 focus:ring-lime-300 duration-400 text-base w-full xs:w-auto text-center"
-            >
-              Contact Us &rarr;
-            </a>
-            <a
-              href="/products"
-              className="bg-white border-2 border-lime-500 text-lime-600 hover:bg-lime-100 hover:border-lime-600 transition rounded-lg font-semibold px-5 xs:px-7 py-3 xs:py-4 shadow-md duration-400 text-base w-full xs:w-auto text-center"
-            >
-              Explore Products
-            </a>
+            {division.ctas.map((cta, idx) => (
+              <a key={idx} href={cta.href} className={cta.className || cta.class}>
+                {cta.text}
+              </a>
+            ))}
           </div>
         </div>
 
@@ -252,7 +346,7 @@ export default function HeroSection() {
                   : (imgIdx)]?.alt}
                 aria-hidden
                 className={`
-                  absolute left-0 top-0 w-full h-full object-contain rounded-2xl
+                  absolute left-0 top-0 w-full h-full object-cover rounded-2xl
                    border-4 border-white/80
                     shadow-2xl
                   transition-all duration-300 ease-in
@@ -269,7 +363,7 @@ export default function HeroSection() {
               src={heroImages[imgIdx].src}
               alt={heroImages[imgIdx].alt}
               className={`
-                absolute left-0 top-0 w-full h-full object-contain rounded-2xl border-4 border-white/80 shadow-2xl
+                absolute left-0 top-0 w-full h-full object-cover rounded-2xl border-4 border-white/80 shadow-2xl
                 transition-all duration-300 ease-in-out
                 ${imgChanging
                   ? imgDirection === "forward"
@@ -288,23 +382,35 @@ export default function HeroSection() {
             <div className="absolute bottom-0 left-0 w-[50%] xs:w-[60%] sm:w-[70%] h-7 sm:h-10 rounded-full bg-gradient-to-tr from-white/50 via-lime-100/40 to-white/0 blur-lg opacity-60 -translate-y-2 pointer-events-none" />
             {/* Small carousel dots */}
             <div className="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-2 z-30">
-              {heroImages.map((_, idx) => (
+              {heroImages.map((img, idx) => (
                 <button
                   key={idx}
                   onClick={() => {
                     if (imgIdx !== idx && !imgChanging) {
                       handleImgChange(idx > imgIdx || (imgIdx === heroImages.length-1 && idx===0) ? 1 : -1);
-                      setTimeout(() => setImgIdx(idx), 30); // jump to target after animation starts
+                      setTimeout(() => setImgIdx(idx), 30);
                     }
                   }}
                   className={`w-2.5 h-2.5 rounded-full border border-lime-300 transition bg-white
                     outline-none ring-0
-                    ${imgIdx === idx ? "bg-lime-400 scale-125 shadow-md border-lime-500" : ""}
+                    ${imgIdx === idx ? (
+                      heroImages[idx]?.division === "Textile"
+                        ? "bg-lime-400 scale-125 shadow-md border-lime-500"
+                        : "bg-green-400 scale-125 shadow-md border-green-600"
+                    ) : ""}
                   `}
-                  aria-label={`Select hero image ${idx+1}`}
+                  aria-label={`Select hero image ${idx+1} (${img.division})`}
                   style={{ pointerEvents: imgIdx === idx || imgChanging ? "none" : "auto" }}
                 />
               ))}
+            </div>
+            {/* Indicator for division, absolute over the image */}
+            <div
+              className={`absolute top-2 right-3 xs:right-4 text-xs px-3 py-1 rounded-full bg-white/70 border font-semibold shadow-sm tracking-wide
+                ${currentDivision === "Agriculture" ? "border-green-500 text-green-700" : "border-lime-400 text-lime-600"}
+              `}
+            >
+              {currentDivision}
             </div>
           </div>
         </div>
@@ -322,7 +428,13 @@ export default function HeroSection() {
         </button>
         <button
           aria-label="Next"
-          className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-lime-500 hover:bg-lime-600 flex items-center justify-center shadow-lg transition transform active:scale-95 group focus:outline-none focus:ring-2 focus:ring-lime-300"
+          className={`w-10 h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center shadow-lg transition transform active:scale-95 group focus:outline-none focus:ring-2 focus:ring-lime-300
+            ${
+              currentDivision === "Agriculture"
+                ? "bg-green-600 hover:bg-green-700"
+                : "bg-lime-500 hover:bg-lime-600"
+            }
+          `}
           onClick={() => !imgChanging && handleImgChange(1)}
           disabled={imgChanging}
         >

@@ -89,6 +89,24 @@ const productCategories = [
     badge: undefined,
     path: "/products/dry-fruits",
   },
+  // ---- Textile & Cloth Division ----
+  {
+    
+    title: "Textiles & Cloth",
+    desc: "Quality textiles reflecting India’s rich weaving heritage.",
+    highlights: [
+      "Cotton Fabrics (100% Pure, Organic, Cambric, Poplin, Voile, Slub Cotton)",
+      "Blended & Synthetic Fabrics (Cotton Blends, Polyester, Rayon, Lycra)",
+      "Traditional Indian Textiles (Handloom, Powerloom, Regional Specialties)",
+      "Home Textile Materials (Bed Linen, Curtains, Upholstery, Towels, Terry Fabrics)",
+      "Sarees, Kurtis, Shawls, Lady Suit, Blouse – and more garment-ready products",
+    ],
+    extra:
+      "Direct partnerships with weavers and manufacturers ensuring consistent quality, ethical sourcing, and artisan empowerment.",
+    img: "/textileLogo.jpeg",
+    badge: "",
+    path: "/products/textile", // Adjust path as needed
+  },
 ];
 
 export default function ProductCategorySection() {
@@ -120,7 +138,7 @@ export default function ProductCategorySection() {
       </div>
 
       {/* PRODUCT CARDS */}
-      <div className="max-w-7xl mx-auto px-6 mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10">
+      <div className="max-w-7xl mx-auto px-6 mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-10">
         {productCategories.map((cat, i) => (
           <div
             key={cat.title}

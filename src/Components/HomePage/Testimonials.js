@@ -21,7 +21,7 @@ export default function TestimonialComponent() {
     setTimeout(() => setAnimate(true), 150);
   }, []);
 
-  // Use sample user images from unsplash or similar sources
+  // Testimonials covering BOTH textile and agriculture (not just one)
   const testimonials = [
     {
       img: "https://randomuser.me/api/portraits/men/32.jpg",
@@ -29,6 +29,7 @@ export default function TestimonialComponent() {
       role: "Importer, UAE",
       text: "Excellent quality and timely shipments from Portusphere. Produce always arrives fresh and as promised.",
       stars: 5,
+      products: ["Agriculture"], // <-- added type for clarity
     },
     {
       img: "https://randomuser.me/api/portraits/women/44.jpg",
@@ -36,6 +37,23 @@ export default function TestimonialComponent() {
       role: "Partner Farmer, UP",
       text: "The Farmer Support Program helped me improve my yield and secure fair, assured prices for my vegetables.",
       stars: 5,
+      products: ["Agriculture"],
+    },
+    {
+      img: "https://randomuser.me/api/portraits/men/52.jpg",
+      clientName: "Rohan S.",
+      role: "Textile Buyer, Maharashtra",
+      text: "Your textile export quality is exactly as described – colors are fast, fabric is comfortable, and packaging is top-notch. Our apparel clients are pleased.",
+      stars: 5,
+      products: ["Textiles"],
+    },
+    {
+      img: "https://randomuser.me/api/portraits/women/42.jpg",
+      clientName: "Priya Sharma",
+      role: "Home Decor Exporter, UK",
+      text: "Beautiful home textile products – cushion covers and fabrics arrived in excellent condition and with vibrant prints, appreciated by my UK clients.",
+      stars: 5,
+      products: ["Textiles"],
     },
     {
       img: "https://randomuser.me/api/portraits/men/83.jpg",
@@ -43,6 +61,7 @@ export default function TestimonialComponent() {
       role: "Retailer, Gujarat",
       text: "Consistent quality and clean packing. Our store customers love the freshness. Highly recommended!",
       stars: 5,
+      products: ["Agriculture"],
     },
     {
       img: "https://randomuser.me/api/portraits/men/61.jpg",
@@ -50,6 +69,15 @@ export default function TestimonialComponent() {
       role: "Distributor, Spain",
       text: "Seamless export process and friendly team. Sourcing Indian vegetables is now reliable and easy.",
       stars: 5,
+      products: ["Agriculture"],
+    },
+    {
+      img: "https://randomuser.me/api/portraits/women/21.jpg",
+      clientName: "Natalia Jimenez",
+      role: "Import Manager, Mexico",
+      text: "Both the fresh vegetables and the textiles in our order were of superb quality and precisely matched our expectations. Two divisions, one reliable partner.",
+      stars: 5,
+      products: ["Agriculture", "Textiles"], // Both!
     },
   ];
 
@@ -89,12 +117,20 @@ export default function TestimonialComponent() {
       >
         <p className="text-lime-600 font-semibold text-lg flex items-center gap-3 justify-center">
           <span className="w-10 h-[2px] bg-lime-500"></span>
-          Our Client
+          Our Clients
           <span className="w-10 h-[2px] bg-lime-500"></span>
         </p>
         <h2 className="text-4xl md:text-5xl font-extrabold text-green-900 mt-3">
-          Our Sweet Client Say
+          What Our Clients Say
         </h2>
+        <div className="mt-3 flex justify-center flex-wrap gap-3">
+          <span className="inline-flex items-center bg-lime-100 text-lime-700 text-sm font-semibold rounded-full px-4 py-1">
+            Agriculture
+          </span>
+          <span className="inline-flex items-center bg-lime-100 text-lime-700 text-sm font-semibold rounded-full px-4 py-1">
+            Textiles
+          </span>
+        </div>
       </div>
 
       {/* Swiper */}
@@ -183,6 +219,17 @@ function TestimonialCard({ item, animate, direction, index }) {
 
         <h3 className="text-green-900 font-extrabold text-xl mt-6">{item.clientName}</h3>
         <p className="text-gray-500 text-sm">{item.role}</p>
+        {/* Highlight the supplied products: */}
+        <div className="flex gap-2 mt-2">
+          {item.products && item.products.map((prod, idx) => (
+            <span
+              key={prod + idx}
+              className={`inline-block bg-lime-100 text-lime-600 font-semibold rounded px-3 py-0.5 text-xs border border-lime-200`}
+            >
+              {prod}
+            </span>
+          ))}
+        </div>
 
         {/* Stars */}
         <div className="flex items-center gap-1 mt-2">

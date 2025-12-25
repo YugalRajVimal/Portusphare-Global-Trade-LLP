@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import { FaCheckCircle } from "react-icons/fa";
 
 export default function AboutSection() {
   const [animate, setAnimate] = useState(false);
@@ -27,9 +26,9 @@ export default function AboutSection() {
             `}
           >
             <img
-              src="/Banner/Banner1.png"
+              src="/textile.jpg"
               className="w-full h-[420px] md:h-[480px] object-cover rounded-[120px_0_120px_0] shadow-lg"
-              alt="About Portusphere Global Trade LLP"
+              alt="About Portusphere Global Trade LLP - Textile Division"
             />
           </div>
 
@@ -52,7 +51,7 @@ export default function AboutSection() {
               <div className="bg-lime-500 p-4 rounded-lg text-white text-2xl">🌱</div>
               <div>
                 <p className="font-bold text-gray-700">Empowering</p>
-                <p className="font-bold text-gray-700">Indian Farmers</p>
+                <p className="font-bold text-gray-700">Indian Farmers & Artisans</p>
               </div>
             </div>
           </div>
@@ -72,19 +71,19 @@ export default function AboutSection() {
           </p>
 
           <h2 className="text-4xl md:text-5xl font-extrabold text-green-900 leading-tight mt-3">
-            Dynamic Agri-Products Exporters<br className="hidden sm:inline" /> From India
+            Leaders in Agri-Products & Textile Exports<br className="hidden sm:inline" /> from India
           </h2>
 
           {/* Main Content Intro */}
           <p className="text-gray-700 mt-6 text-lg">
-            Portusphere Global Trade LLP is a dynamic trading and export company dedicated to providing high-quality agricultural products sourced directly from farmers. We operate in both domestic and export markets, focusing on quality, sustainability, and trust.
+            Portusphere Global Trade LLP is a dynamic, trust-driven export house dedicated to delivering both high-quality agricultural products and world-class Indian textiles to domestic and global markets. We bridge India's rich traditions—from farm to fabric—combining modern technology and responsible sourcing with our deep-rooted commitment to sustainability and excellence.
           </p>
 
           {/* Vision */}
           <div className="mt-7">
             <h3 className="text-green-900 font-bold text-xl mb-1">Our Vision</h3>
             <p className="text-gray-700 text-base">
-              To become a global leader in supplying clean, fresh, and authentic Indian agri-products while uplifting the farming community.
+              To become a global leader in supplying clean, authentic Indian agri-products and premium textiles, while uplifting the farming and artisan communities across India.
             </p>
           </div>
 
@@ -92,17 +91,19 @@ export default function AboutSection() {
           <div className="mt-7">
             <h3 className="text-green-900 font-bold text-xl mb-1">Our Mission</h3>
             <ul className="list-disc pl-6 text-gray-700 space-y-2 text-base">
-              <li>To deliver premium agricultural products with strict quality control</li>
-              <li>To create sustainable income opportunities for farmers</li>
-              <li>To build long-term business relationships world over</li>
-              <li>To promote India’s agricultural excellence globally</li>
+              <li>To deliver agricultural produce and textile goods that meet the highest quality and ethical standards</li>
+              <li>To create sustainable income opportunities and empowerment for both farmers and artisans</li>
+              <li>To build long-term business relationships founded on trust, value, and innovation</li>
+              <li>To actively promote India’s agricultural and textile excellence on the world stage</li>
             </ul>
           </div>
 
           {/* Tagline */}
           <div className="mt-7">
             <h3 className="text-green-900 font-bold text-xl mb-1">Our Tagline</h3>
-            <blockquote className="border-l-4 border-lime-500 pl-4 italic text-lime-700 text-lg">“From Our Land to the World”</blockquote>
+            <blockquote className="border-l-4 border-lime-500 pl-4 italic text-lime-700 text-lg">
+              “From Our Land & Looms To The World”
+            </blockquote>
           </div>
 
           {/* CTA + Company Info */}

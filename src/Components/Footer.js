@@ -44,13 +44,13 @@ export default function Footer() {
                 Portusphere Global Trade LLP
               </h2>
               <span className="inline-block text-xs text-lime-300 mt-1">
-                Fresh Produce & Agri Exports
+                Fresh Produce, Textiles &amp; Agri Exports
               </span>
             </div>
           </div>
           <p className="text-gray-200 mt-4 text-sm">
-            Trusted supplier & exporter of vegetables, fruits, spices, and grains from India.
-            Direct from farmers. Certified quality. Global delivery.
+            Trusted supplier & exporter of vegetables, fruits, spices, grains, and textile products from India.
+            Direct from farmers and artisans. Certified quality. Global delivery.
           </p>
 
           {/* Optional: quick trust icons */}
@@ -96,11 +96,6 @@ export default function Footer() {
                 <FaBoxOpen className="text-lg"/> Products
               </a>
             </li>
-            {/* <li>
-              <a href="#farmer-support" className="flex items-center gap-2 hover:text-lime-400 transition">
-                <FaLeaf /> Farmer Program
-              </a>
-            </li> */}
             <li>
               <a href="#contact" className="flex items-center gap-2 hover:text-lime-400 transition">
                 <FaEnvelope className="text-lg"/> Contact
@@ -109,7 +104,7 @@ export default function Footer() {
           </ul>
         </div>
 
-        {/* KEY EXPORT PRODUCTS */}
+        {/* KEY EXPORT PRODUCTS - SHOW BOTH AGRICULTURE AND TEXTILE */}
         <div
           className={`
             transition-all duration-700 delay-300
@@ -117,29 +112,62 @@ export default function Footer() {
           `}
         >
           <h3 className="text-xl font-extrabold mb-6">Our Exports</h3>
-          <ul className="space-y-3 text-gray-200 text-sm">
-            <li>
-              <a href="/products/fresh-vegetables" className="underline hover:text-lime-400 transition font-semibold">
-                Fresh Vegetables
-              </a>: Onion, Potato, Green Chilli, Lemon, Drumstick
-            </li>
-            <li>
-              <a href="/products/fresh-fruits" className="underline hover:text-lime-400 transition font-semibold">
-                Fresh Fruits
-              </a>: Mango, Pomegranate, Banana
-            </li>
-            <li>
-              <a href="/products/indian-spices" className="underline hover:text-lime-400 transition font-semibold">
-                Indian Spices
-              </a>: Turmeric, Chilli, Cumin, Coriander
-            </li>
-            <li>
-              <a href="/products/grains-pulses" className="underline hover:text-lime-400 transition font-semibold">
-                Grains & Pulses
-              </a>: Rice, Wheat, Dal
-            </li>
-         
-          </ul>
+          <div className="flex flex-col gap-5">
+            <div>
+              <h4 className="font-semibold text-lime-300 mb-1 flex items-center gap-2 text-base">
+                <FaLeaf className="inline text-lime-400" /> Agriculture &amp; Food Products
+              </h4>
+              <ul className="space-y-3 text-gray-200 text-sm">
+                <li>
+                  <a href="/products/fresh-vegetables" className="underline hover:text-lime-400 transition font-semibold">
+                    Fresh Vegetables
+                  </a>: Onion, Potato, Green Chilli, Lemon, Drumstick
+                </li>
+                <li>
+                  <a href="/products/fresh-fruits" className="underline hover:text-lime-400 transition font-semibold">
+                    Fresh Fruits
+                  </a>: Mango, Pomegranate, Banana
+                </li>
+                <li>
+                  <a href="/products/indian-spices" className="underline hover:text-lime-400 transition font-semibold">
+                    Indian Spices
+                  </a>: Turmeric, Chilli, Cumin, Coriander
+                </li>
+                <li>
+                  <a href="/products/grains-pulses" className="underline hover:text-lime-400 transition font-semibold">
+                    Grains & Pulses
+                  </a>: Rice, Wheat, Dal
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="font-semibold text-lime-300 mb-1 flex items-center gap-2 text-base">
+                <FaTshirt className="inline text-lime-400" /> Textile Products
+              </h4>
+              <ul className="space-y-3 text-gray-200 text-sm">
+                <li>
+                  <a href="/products/cotton-fabrics" className="underline hover:text-lime-400 transition font-semibold">
+                    Cotton &amp; Blended Fabrics
+                  </a>: Shirting, Suiting, Dyed/Printed Fabric
+                </li>
+                <li>
+                  <a href="/products/traditional-textiles" className="underline hover:text-lime-400 transition font-semibold">
+                    Traditional Textiles
+                  </a>: Sarees, Dupattas, Jacquard, Handloom
+                </li>
+                <li>
+                  <a href="/products/home-textiles" className="underline hover:text-lime-400 transition font-semibold">
+                    Home Textile Materials
+                  </a>: Bed Sheets, Curtains, Cushion Covers
+                </li>
+                <li>
+                  <a href="/products/garments" className="underline hover:text-lime-400 transition font-semibold">
+                    Garment-ready Products
+                  </a>: Sarees, Kurtis, Stoles, Children's Wear
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
 
         {/* CONTACT INFO */}
@@ -218,7 +246,7 @@ export default function Footer() {
               <span className="font-bold text-lime-400">
                 Portusphere Global Trade LLP
               </span>{" "}
-              | Fresh Indian Produce to the World
+              | Fresh Indian Produce &amp; Textiles to the World
             </div>
 
             <div className="md:mt-0 text-gray-400">
@@ -251,4 +279,3 @@ export default function Footer() {
     </footer>
   );
 }
-
