@@ -206,12 +206,12 @@ export default function Navbar() {
 
 
             {/* CTA Button */}
-            <a
+            {/* <a
               href="/contact-us"
               className="bg-lime-500 hover:bg-lime-600 transition text-white text-xs sm:text-base px-4 sm:px-6 py-2 sm:py-3 rounded-md font-semibold"
             >
               Get A Quote
-            </a>
+            </a> */}
 
             {/* Contact */}
             <div className="hidden md:flex items-center gap-2 sm:gap-3">
