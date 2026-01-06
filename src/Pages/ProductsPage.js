@@ -18,7 +18,7 @@ const productCategories = [
       "Casual Sarees",
     ],
     extra: "Each saree is carefully sourced for quality, variety, and comfort.",
-    img: "/Products/saree.jpg",
+    img: "/Products/sarees.jpg",
     path: "/products/sarees",
   },
   {
@@ -50,7 +50,7 @@ const productCategories = [
       "Unstitched Dress Materials",
     ],
     extra: "Wide range of colors, fabrics, and designs for every preference.",
-    img: "/Products/ladies_suit.jpg",
+    img: "/Products/suit.jpg",
     path: "/products/ladies-suits",
   },
   {
@@ -66,7 +66,7 @@ const productCategories = [
       "Designer Kurtis",
     ],
     extra: "Perfect for daily wear, work, or festive occasions.",
-    img: "/Products/kurtis.jpg",
+    img: "/Products/kurti.jpg",
     path: "/products/kurtis",
   },
   {
