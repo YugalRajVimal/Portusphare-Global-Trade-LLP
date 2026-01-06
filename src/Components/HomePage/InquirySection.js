@@ -27,7 +27,7 @@ export default function CTAInquirySection() {
             ${animate ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}
           `}
         >
-          <h2 className="text-4xl font-extrabold text-green-900 mb-6">
+          <h2 className="text-4xl font-extrabold text-green-900 mb-6 font-serif">
             Get In Touch With Us
           </h2>
 
@@ -112,7 +112,7 @@ export default function CTAInquirySection() {
             ${animate ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}
           `}
         >
-          <h3 className="text-2xl font-bold text-green-900 mb-6">
+          <h3 className="text-2xl font-bold text-green-900 mb-6 font-serif">
             Send Us a Message
           </h3>
 

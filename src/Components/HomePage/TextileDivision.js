@@ -8,10 +8,10 @@ export default function HomeTextileSection() {
 
         {/* Left Content */}
         <div>
-          <h3 className="text-lime-700 font-semibold tracking-widest uppercase mb-2">
+          <h3 className="text-lime-700 font-semibold tracking-widest uppercase mb-2 font-serif">
             Our Division
           </h3>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-lime-900 mb-4">
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-lime-900 mb-4 font-serif">
             Textile & Cloth Division
           </h2>
           <p className="text-gray-700 mb-5 leading-relaxed">

@@ -15,7 +15,7 @@ const textileCategories = [
       "And many more styles…",
     ],
     img: "/Products/sarees.jpg",
-    path: "/products/textile/saree",
+    path: "/products/sarees",
     extra: "Customization and export packing available for bulk as well as boutique requests.",
   },
   {
@@ -31,7 +31,7 @@ const textileCategories = [
       "And more options…",
     ],
     img: "/Products/blouse.jpg",
-    path: "/products/textile/blouse",
+    path: "/products/blouses",
     extra: "Quality stitching, intricate details, and high versatility in designs.",
   },
   {
@@ -46,7 +46,7 @@ const textileCategories = [
       "Cotton, Chiffon, Silk, Georgette Materials",
     ],
     img: "/Products/suit.jpg",
-    path: "/products/textile/ladysuit",
+    path: "/products/ladies-suits",
     extra: "Fabrics suited for comfort, durability, and elegance for all occasions.",
   },
   {
@@ -60,7 +60,7 @@ const textileCategories = [
       "Custom Colors & Sizes",
     ],
     img: "/Products/kurti.jpg",
-    path: "/products/textile/kurtis",
+    path: "/products/kurtis",
     extra: "Available for private label and wholesale programs.",
   },
   {
@@ -74,7 +74,7 @@ const textileCategories = [
       "Plain, Patterned & Occasion Shawls",
     ],
     img: "/Products/shawl.jpg",
-    path: "/products/textile/shawl",
+    path: "/products/shawls",
     extra: "World-class finishing and packaging. Bulk & gifting orders serviced globally.",
   },
   {
@@ -89,7 +89,7 @@ const textileCategories = [
       "Custom Orders & Sourcing Solutions",
     ],
    
-    path: "/products/textile",
+    path: "/products",
     extra: "Partner with us for made-to-order, OEM, or signature collections. Enquire for details.",
   },
 ];
@@ -111,13 +111,13 @@ export default function ProductCategorySection() {
           ${animate ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}
         `}
       >
-        <p className="text-lime-600 font-semibold text-lg flex items-center justify-center gap-3">
+        <p className="text-lime-600 font-semibold text-lg flex items-center justify-center gap-3 font-serif">
           <span className="w-10 h-[2px] bg-lime-500"></span>
            OUR TEXTILE CATEGORIES
           <span className="w-10 h-[2px] bg-lime-500"></span>
         </p>
 
-        <h2 className="text-4xl md:text-5xl font-extrabold text-green-900 mt-3">
+        <h2 className="text-4xl md:text-5xl font-extrabold text-green-900 mt-3 font-serif">
           Textile Product Categories
         </h2>
         <p className="text-gray-600 text-base mt-3 max-w-2xl mx-auto">
@@ -140,9 +140,11 @@ export default function ProductCategorySection() {
             <div>
               <a href={cat.path} className="block focus:outline-none focus:ring-2 focus:ring-lime-400 rounded-full">
                 <div className="relative mb-8 w-full flex justify-center items-center">
-                  <div className="w-20 h-20 rounded-full bg-lime-50 flex items-center justify-center shadow-lg overflow-hidden">
+                  <div className="w-32 h-32 rounded-full bg-lime-50 flex items-center justify-center shadow-lg overflow-hidden">
+                   {/* <img src={cat.img} alt={cat.title} className="object-cover w-40 h-40" /> */}
+
                     {cat.img
-                      ? <img src={cat.img} alt={cat.title} className="object-cover w-20 h-20" />
+                      ? <img src={cat.img} alt={cat.title} className="object-cover w-32 h-32" />
                       : (
                         <span
                           className="text-3xl text-lime-600"
@@ -151,12 +153,10 @@ export default function ProductCategorySection() {
                         >🧵</span>
                       )}
                   </div>
-                  <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-                    <span className="opacity-80 text-2xl" role="img" aria-label="textile">🧵</span>
-                  </div>
+                 
                 </div>
               </a>
-              <h3 className="text-green-900 font-extrabold text-xl text-center mb-2">
+              <h3 className="text-green-900 font-extrabold text-xl text-center mb-2 font-serif">
                 <a href={cat.path} className="hover:text-lime-700 transition-colors">{cat.title}</a>
               </h3>
               <p className="text-gray-600 text-center mb-4">{cat.desc}</p>
@@ -175,7 +175,7 @@ export default function ProductCategorySection() {
             <div className="mt-6 flex justify-center">
               <a
                 href={cat.path}
-                className="rounded-full bg-lime-500 hover:bg-lime-600 text-white font-semibold px-6 py-2 text-sm shadow transition mr-2"
+                className="rounded-full bg-lime-500 hover:bg-lime-600 text-white font-semibold px-6 py-2 text-sm shadow transition mr-2 font-serif"
               >
                 View {cat.title}
               </a>
@@ -186,7 +186,7 @@ export default function ProductCategorySection() {
       <div className="flex justify-center mt-10 mx-auto">
         <a
           href="/products/textile"
-          className="rounded-full mx-auto border-2 border-lime-500 text-lime-700 px-10 py-4 font-bold text-lg bg-white hover:bg-lime-50 transition shadow-lg w-full max-w-xs text-center"
+          className="rounded-full mx-auto border-2 border-lime-500 text-lime-700 px-10 py-4 font-bold text-lg bg-white hover:bg-lime-50 transition shadow-lg w-full max-w-xs text-center font-serif"
         >
           All Textile Products
         </a>

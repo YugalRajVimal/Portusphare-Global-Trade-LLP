@@ -41,12 +41,12 @@ export default function TextileEmpowerment() {
             ${animate ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}
           `}
         >
-          <p className="text-lime-600 font-semibold text-lg flex items-center gap-3">
+          <p className="text-lime-600 font-semibold text-lg flex items-center gap-3 font-serif">
             3.&nbsp;Empowering Textile Artisans
             <span className="w-14 h-[2px] bg-lime-600"></span>
           </p>
 
-          <h2 className="text-4xl md:text-5xl font-extrabold text-green-900 leading-tight mt-3">
+          <h2 className="text-4xl md:text-5xl font-extrabold text-green-900 leading-tight mt-3 font-serif">
             Uplifting India's Textile Community
           </h2>
 
@@ -64,7 +64,7 @@ export default function TextileEmpowerment() {
             ))}
           </ul>
 
-          <p className="text-green-900 font-semibold mt-8 text-lg">
+          <p className="text-green-900 font-semibold mt-8 text-lg font-serif">
             By connecting artisans with new technologies and global markets, we enable sustainable growth, skill development, and greater prosperity.
           </p>
         </div>

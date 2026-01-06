@@ -29,12 +29,12 @@ export default function WhyChooseUs() {
             ${animate ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}
           `}
         >
-          <p className="text-lime-600 font-semibold text-base xs:text-lg flex items-center gap-2 xs:gap-3 justify-center">
+          <p className="text-lime-600 font-semibold text-base xs:text-lg flex items-center gap-2 xs:gap-3 justify-center font-serif">
             <span className="w-7 xs:w-10 h-[2px] bg-lime-500"></span>
             WHY CHOOSE PORTUSPHERE FOR TEXTILE EXPORTS?
             <span className="w-7 xs:w-10 h-[2px] bg-lime-500"></span>
           </p>
-          <h2 className="text-2xl xs:text-3xl md:text-4xl font-extrabold text-green-900 mt-3">
+          <h2 className="text-2xl xs:text-3xl md:text-4xl font-extrabold text-green-900 mt-3 font-serif">
             Setting Global Standards in Indian Textiles
           </h2>
         </div>
@@ -51,49 +51,49 @@ export default function WhyChooseUs() {
             `}
           >
             {/* Direct procurement from leading Indian mills */}
-            <div className="flex flex-col items-center justify-center bg-white text-green-900 shadow-xl rounded-xl px-6 py-6 sm:py-8 text-center font-semibold text-base xs:text-lg sm:text-xl leading-snug">
+            <div className="flex flex-col items-center justify-center bg-white text-green-900 shadow-xl rounded-xl px-6 py-6 sm:py-8 text-center font-semibold text-base xs:text-lg sm:text-xl leading-snug font-serif">
               Direct procurement from renowned Indian textile mills
               <span className="text-green-700 text-xs mt-2 font-normal">
                 (Cotton yarn, fabrics, apparel, &amp; home textiles)
               </span>
             </div>
             {/* Certified Quality */}
-            <div className="flex flex-col items-center  justify-center bg-lime-100 text-lime-700 shadow-xl rounded-xl px-6 py-6 sm:py-8 text-center font-semibold text-base xs:text-lg sm:text-xl leading-snug">
+            <div className="flex flex-col items-center  justify-center bg-lime-100 text-lime-700 shadow-xl rounded-xl px-6 py-6 sm:py-8 text-center font-semibold text-base xs:text-lg sm:text-xl leading-snug font-serif">
               Internationally certified quality standards
               <span className="text-lime-700 text-xs mt-2 font-normal">
                 (OEKO-TEX, GOTS, ISO, &amp; more)
               </span>
             </div>
             {/* Cutting-edge Manufacturing */}
-            <div className="bg-white text-green-900 flex flex-col items-center  justify-center shadow-xl rounded-xl px-6 py-6 sm:py-8 text-center font-semibold text-base xs:text-lg sm:text-xl leading-snug">
+            <div className="bg-white text-green-900 flex flex-col items-center  justify-center shadow-xl rounded-xl px-6 py-6 sm:py-8 text-center font-semibold text-base xs:text-lg sm:text-xl leading-snug font-serif">
               Modern, tech-driven manufacturing facilities
               <span className="block text-xs text-gray-600 mt-2 font-normal">
                 (Automated mills, stringent QC, sustainable practices)
               </span>
             </div>
             {/* Adaptable MOQs & Pricing */}
-            <div className="bg-lime-100 text-lime-700 flex flex-col items-center  justify-center shadow-xl rounded-xl px-6 py-6 sm:py-8 text-center font-semibold text-base xs:text-lg sm:text-xl leading-snug">
+            <div className="bg-lime-100 text-lime-700 flex flex-col items-center  justify-center shadow-xl rounded-xl px-6 py-6 sm:py-8 text-center font-semibold text-base xs:text-lg sm:text-xl leading-snug font-serif">
               Competitive prices &amp; flexible MOQs
               <span className="block text-xs text-gray-600 mt-2 font-normal">
                 (Serving both bulk and specialized requirements)
               </span>
             </div>
             {/* Customized Branding & Packaging */}
-            <div className="flex flex-col items-center  justify-center bg-white text-green-900 shadow-xl rounded-xl px-6 py-6 sm:py-8 text-center font-semibold text-base xs:text-lg sm:text-xl leading-snug">
+            <div className="flex flex-col items-center  justify-center bg-white text-green-900 shadow-xl rounded-xl px-6 py-6 sm:py-8 text-center font-semibold text-base xs:text-lg sm:text-xl leading-snug font-serif">
               Bespoke packaging &amp; strong branding solutions
               <span className="text-green-700 text-xs mt-2 font-normal">
                 (Retail-ready and custom overseas packaging options)
               </span>
             </div>
             {/* Global Logistics */}
-            <div className="flex flex-col items-center  justify-center bg-lime-100 text-lime-700 shadow-xl rounded-xl px-6 py-6 sm:py-8 text-center font-semibold text-base xs:text-lg sm:text-xl leading-snug">
+            <div className="flex flex-col items-center  justify-center bg-lime-100 text-lime-700 shadow-xl rounded-xl px-6 py-6 sm:py-8 text-center font-semibold text-base xs:text-lg sm:text-xl leading-snug font-serif">
               Efficient international logistics &amp; timely delivery
               <span className="text-lime-700 text-xs mt-2 font-normal">
                 (Pan-India access, reliable global shipping)
               </span>
             </div>
             {/* Social Responsibility */}
-            <div className="col-span-1 md:col-span-2 flex flex-col items-center justify-center bg-gradient-to-r from-green-50 via-lime-50 to-white text-green-900 shadow-xl rounded-xl px-6 py-6 sm:py-8 text-center font-semibold text-base xs:text-lg sm:text-xl leading-snug mt-1">
+            <div className="col-span-1 md:col-span-2 flex flex-col items-center justify-center bg-gradient-to-r from-green-50 via-lime-50 to-white text-green-900 shadow-xl rounded-xl px-6 py-6 sm:py-8 text-center font-semibold text-base xs:text-lg sm:text-xl leading-snug mt-1 font-serif">
               <div className="flex flex-wrap gap-6 justify-center mb-2">
                 {/* <img
                   src="/Banner/Textile3.png"

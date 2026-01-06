@@ -40,7 +40,7 @@ export default function Footer() {
           <div className="flex flex-col items-start gap-3 mb-4">
             <img src="/logo.jpeg" className="h-24" alt="Portusphere Global Trade LLP Logo" />
             <div>
-              <h2 className="text-2xl md:text-3xl font-extrabold leading-tight">
+              <h2 className="text-2xl md:text-3xl font-extrabold leading-tight font-serif">
                 Portusphere Global Trade LLP
               </h2>
               <span className="inline-block text-xs text-lime-300 mt-1">
@@ -74,7 +74,7 @@ export default function Footer() {
             ${animate ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}
           `}
         >
-          <h3 className="text-xl font-extrabold mb-6">Quick Links</h3>
+          <h3 className="text-xl font-extrabold mb-6 font-serif">Quick Links</h3>
           <ul className="space-y-3 text-gray-200">
             <li>
               <a href="/" className="flex items-center gap-2 hover:text-lime-400 transition">
@@ -111,10 +111,10 @@ export default function Footer() {
             ${animate ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}
           `}
         >
-          <h3 className="text-xl font-extrabold mb-6">Our Exports</h3>
+          <h3 className="text-xl font-extrabold mb-6 font-serif">Our Exports</h3>
           <div className="flex flex-col gap-5">
             <div>
-              <h4 className="font-semibold text-lime-300 mb-1 flex items-center gap-2 text-base">
+              <h4 className="font-semibold text-lime-300 mb-1 flex items-center gap-2 text-base font-serif">
                 <FaLeaf className="inline text-lime-400" /> Agriculture &amp; Food Products
               </h4>
               <ul className="space-y-3 text-gray-200 text-sm">
@@ -141,7 +141,7 @@ export default function Footer() {
               </ul>
             </div>
             <div>
-              <h4 className="font-semibold text-lime-300 mb-1 flex items-center gap-2 text-base">
+              <h4 className="font-semibold text-lime-300 mb-1 flex items-center gap-2 text-base font-serif">
                 <FaTshirt className="inline text-lime-400" /> Textile Products
               </h4>
               <ul className="space-y-3 text-gray-200 text-sm">
@@ -177,7 +177,7 @@ export default function Footer() {
             ${animate ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}
           `}
         >
-          <h3 className="text-xl font-extrabold mb-6">Contact Us</h3>
+          <h3 className="text-xl font-extrabold mb-6 font-serif">Contact Us</h3>
           <ul className="space-y-4 text-gray-300 text-sm">
             <li className="flex gap-2 items-start">
               <FaEnvelope className="mt-1 text-lime-400 shrink-0 text-lg" />
@@ -243,7 +243,7 @@ export default function Footer() {
         <div className="relative z-10 max-w-7xl mx-auto px-6 py-6 text-gray-300 text-xs md:text-sm flex flex-col md:flex-row justify-between items-center">
           <div className="mb-3 md:mb-0 flex flex-col ">
             <div>
-              <span className="font-bold text-lime-400">
+              <span className="font-bold text-lime-400 font-serif">
                 Portusphere Global Trade LLP
               </span>{" "}
               | Fresh Indian Produce &amp; Textiles to the World

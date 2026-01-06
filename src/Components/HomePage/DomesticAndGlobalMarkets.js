@@ -50,12 +50,12 @@ export default function DomesticGlobalTextileMarkets() {
             ${animate ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}
           `}
         >
-          <p className="text-lime-600 font-semibold text-lg flex items-center justify-center gap-3">
+          <p className="text-lime-600 font-semibold text-lg font-serif flex items-center justify-center gap-3">
             <span className="w-10 h-[2px] bg-lime-500"></span>
             Domestic & Global Textile Presence
             <span className="w-10 h-[2px] bg-lime-500"></span>
           </p>
-          <h2 className="text-4xl md:text-5xl font-extrabold text-green-900 mt-3">
+          <h2 className="text-4xl md:text-5xl font-extrabold text-green-900 mt-3 font-serif">
             Delivering Indian Textiles Across India & The World
           </h2>
         </div>
@@ -72,7 +72,7 @@ export default function DomesticGlobalTextileMarkets() {
             `}
           >
             <div>
-              <h3 className="text-2xl font-extrabold text-green-900 mb-4">
+              <h3 className="text-2xl font-extrabold text-green-900 mb-4 font-serif">
                 Indian Domestic Textile Clients
               </h3>
 
@@ -91,7 +91,7 @@ export default function DomesticGlobalTextileMarkets() {
             </div>
             {/* Products Served section */}
             <div className="mt-4">
-              <div className="font-semibold text-lime-800 text-md mb-1">
+              <div className="font-semibold text-lime-800 text-md mb-1 font-serif">
                 Products Offered:
               </div>
               <ul className="list-disc list-inside text-gray-700 text-sm space-y-1 mt-2">
@@ -111,7 +111,7 @@ export default function DomesticGlobalTextileMarkets() {
             `}
           >
             <div>
-              <h3 className="text-2xl font-extrabold text-green-900 mb-4">
+              <h3 className="text-2xl font-extrabold text-green-900 mb-4 font-serif">
                 Global Textile Export Destinations
               </h3>
 
@@ -130,7 +130,7 @@ export default function DomesticGlobalTextileMarkets() {
             </div>
             {/* Export Range Section */}
             <div className="mt-4">
-              <div className="font-semibold text-lime-800 text-md mb-1">
+              <div className="font-semibold text-lime-800 text-md mb-1 font-serif">
                 Textile Export Portfolio:
               </div>
               <ul className="list-disc list-inside text-gray-700 text-sm space-y-1 mt-2">

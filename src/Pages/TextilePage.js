@@ -45,7 +45,7 @@ export default function AgriculturePage() {
       {/* ================= TITLE ================= */}
       <div className="flex items-center gap-4 mb-10 justify-center text-center">
         <span className="w-12 h-1.5 bg-lime-500 rounded-full" />
-        <h1 className="text-lime-900 font-extrabold tracking-wide uppercase text-3xl sm:text-5xl">
+        <h1 className="text-lime-900 font-extrabold tracking-wide uppercase text-3xl sm:text-5xl font-serif">
           Agriculture & Food Products
         </h1>
         <span className="w-12 h-1.5 bg-lime-500 rounded-full" />
@@ -56,7 +56,7 @@ export default function AgriculturePage() {
 
         {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="text-2xl sm:text-3xl font-semibold text-green-700">
+          <h2 className="text-2xl sm:text-3xl font-semibold text-green-700 font-serif">
             Portusphere Global Trade LLP
           </h2>
           <p className="text-lg text-green-800 font-medium mt-2">
@@ -69,7 +69,7 @@ export default function AgriculturePage() {
 
         {/* ================= AGRICULTURE RANGE ================= */}
         <section className="mb-20">
-          <h3 className="text-3xl font-bold text-lime-800 mb-10 text-center">
+          <h3 className="text-3xl font-bold text-lime-800 mb-10 text-center font-serif">
             Our Agricultural Range
           </h3>
 
@@ -106,7 +106,7 @@ export default function AgriculturePage() {
               >
                 <div className="flex items-center mb-4">
                   <span className="text-3xl mr-3">{item.icon}</span>
-                  <h4 className="font-bold text-lime-900 text-xl">
+                  <h4 className="font-bold text-lime-900 text-xl font-serif">
                     {item.title}
                   </h4>
                 </div>
@@ -122,7 +122,7 @@ export default function AgriculturePage() {
 
         {/* ================= QUALITY ================= */}
         <section className="mb-20">
-          <h3 className="text-3xl font-bold text-lime-800 mb-6 text-center">
+          <h3 className="text-3xl font-bold text-lime-800 mb-6 text-center font-serif">
             Quality & Sourcing
           </h3>
 

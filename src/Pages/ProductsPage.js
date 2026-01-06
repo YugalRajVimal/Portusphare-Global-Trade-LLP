@@ -98,7 +98,7 @@ export default function ProductsPage() {
 
       <div className="flex items-center gap-3 mb-10 justify-center text-center w-full">
         <span className="w-10 h-1.5 bg-lime-500 rounded-full inline-block" />
-        <span className="text-lime-900 font-extrabold tracking-widest uppercase text-3xl sm:text-5xl">Our Products</span>
+        <span className="text-lime-900 font-extrabold tracking-widest uppercase text-3xl sm:text-5xl font-serif">Our Products</span>
         <span className="w-10 h-1.5 bg-lime-500 rounded-full inline-block" />
       </div>
       <p className="max-w-2xl mx-auto text-center text-gray-600 mt-4 text-lg px-4">
@@ -141,7 +141,7 @@ export default function ProductsPage() {
 
                 {/* CONTENT BLOCK */}
                 <div className="text-left">
-                  <h3 className="text-green-900 font-extrabold text-3xl lg:text-4xl mb-3">
+                  <h3 className="text-green-900 font-extrabold text-3xl lg:text-4xl mb-3 font-serif">
                     <a href={cat.path} className="hover:text-lime-700 transition-colors">{cat.title}</a>
                   </h3>
 

@@ -40,7 +40,7 @@ export default function SeperateProductPage({
             </div>
           </div>
           <div className="text-center">
-            <h1 className="text-3xl sm:text-4xl font-extrabold text-green-900 mb-4">{title}</h1>
+            <h1 className="text-3xl sm:text-4xl font-extrabold text-green-900 mb-4 font-serif">{title}</h1>
             <p className="text-gray-700 text-lg mb-2">{desc}</p>
           </div>
 
@@ -48,7 +48,7 @@ export default function SeperateProductPage({
           <div className="w-full flex flex-col justify-center items-center">
             {highlights && highlights.length > 0 && (
               <div className="mb-8 w-full">
-                <h2 className="text-lime-700 font-semibold mb-4 text-center text-xl">Key Features</h2>
+                <h2 className="text-lime-700 font-semibold mb-4 text-center text-xl font-serif">Key Features</h2>
                 <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 list-disc list-inside text-green-800 w-full max-w-3xl mx-auto">
                   {highlights.map((item, idx) => (
                     <li
@@ -70,7 +70,7 @@ export default function SeperateProductPage({
 
         {/* Why Choose Section */}
         <section className="mt-10">
-          <h2 className="text-2xl sm:text-3xl font-bold text-green-900 mb-8 text-center">
+          <h2 className="text-2xl sm:text-3xl font-bold text-green-900 mb-8 text-center font-serif">
             Why Choose Our Textiles
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
@@ -104,7 +104,7 @@ export default function SeperateProductPage({
                 key={idx}
                 className="rounded-2xl bg-white shadow-md p-6 border border-gray-100 hover:shadow-lg transition"
               >
-                <h3 className="font-semibold text-lg text-green-900 mb-2">
+                <h3 className="font-semibold text-lg text-green-900 mb-2 font-serif">
                   {item.title}
                 </h3>
                 <p className="text-gray-600 text-sm">{item.desc}</p>
@@ -115,12 +115,12 @@ export default function SeperateProductPage({
 
         {/* Packaging & Availability */}
         <section className="mt-10 bg-white/70 rounded-3xl p-8 shadow-lg">
-          <h2 className="text-2xl font-bold text-green-900 mb-6">
+          <h2 className="text-2xl font-bold text-green-900 mb-6 font-serif">
             Packaging & Delivery
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 text-gray-700">
             <div>
-              <h3 className="font-semibold text-green-800 mb-2">Packaging Options</h3>
+              <h3 className="font-semibold text-green-800 mb-2 font-serif">Packaging Options</h3>
               <ul className="space-y-1 text-sm">
                 <li>• Individual polybag or customized packaging</li>
                 <li>• Bulk carton or bale packing for exports</li>
@@ -128,7 +128,7 @@ export default function SeperateProductPage({
               </ul>
             </div>
             <div>
-              <h3 className="font-semibold text-green-800 mb-2">Availability & Supply</h3>
+              <h3 className="font-semibold text-green-800 mb-2 font-serif">Availability & Supply</h3>
               <ul className="space-y-1 text-sm">
                 <li>• Large-scale manufacturing capacity</li>
                 <li>• Steady stock for urgent orders</li>
@@ -140,7 +140,7 @@ export default function SeperateProductPage({
 
         {/* Call to Action */}
         <section className="mt-20 text-center">
-          <h2 className="text-2xl sm:text-3xl font-bold text-green-900 mb-4">
+          <h2 className="text-2xl sm:text-3xl font-bold text-green-900 mb-4 font-serif">
             Ready to Elevate Your Textile Collection?
           </h2>
           <p className="text-gray-600 mb-6 max-w-xl mx-auto">

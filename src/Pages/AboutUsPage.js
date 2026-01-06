@@ -14,7 +14,7 @@ export default function AboutUsPage() {
       <section className="relative w-full mt-16 xs:mt-28 mb-10 sm:mt-28 pt-10 overflow-hidden bg-gradient-to-b from-[#fcfefd] via-[#f5fce8] to-white">
         <div className="flex items-center gap-3 mb-10 justify-center text-center w-full">
           <span className="w-10 h-1.5 bg-lime-500 rounded-full inline-block" />
-          <span className="text-lime-900 font-extrabold tracking-widest uppercase text-3xl sm:text-5xl">
+          <span className="text-lime-900 font-extrabold tracking-widest uppercase text-3xl sm:text-5xl font-serif">
             About Us
           </span>
           <span className="w-10 h-1.5 bg-lime-500 rounded-full inline-block" />
@@ -44,7 +44,7 @@ export default function AboutUsPage() {
                {/* Tagline & CTA */}
                <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6 mt-12">
               <div className="flex-1">
-                <h4 className="text-green-900 font-extrabold text-xl mb-2">Our Tagline</h4>
+                <h4 className="text-green-900 font-extrabold text-xl mb-2 font-serif">Our Tagline</h4>
                 <blockquote className="border-l-4 border-lime-500 pl-5 italic text-lime-700 bg-lime-50 py-2 px-2 rounded-r-lg shadow">
                   “Weaving Indian Stories for the World.”
                 </blockquote>
@@ -83,7 +83,7 @@ export default function AboutUsPage() {
               relative z-10
             `}
           >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-green-900 leading-tight drop-shadow-md">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-green-900 leading-tight drop-shadow-md font-serif">
               Celebrating India's Textile Legacy<br className="hidden sm:inline" /> for the World
             </h2>
 
@@ -127,7 +127,7 @@ export default function AboutUsPage() {
             {/* <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 mt-10">
 
               <div className="bg-lime-50/80 rounded-xl shadow-sm p-6 border-l-4 border-lime-400">
-                <div className="font-bold text-green-900 text-lg mb-2">Apparel Range</div>
+                <div className="font-bold text-green-900 text-lg mb-2 font-serif">Apparel Range</div>
                 <ul className="list-disc list-inside text-gray-700 text-sm space-y-1">
                   <li>Sarees (Kanjeevaram, Banarasi, Handloom, Designer, Regional)</li>
                   <li>Blouses (Ready-to-wear & Designer)</li>
@@ -137,7 +137,7 @@ export default function AboutUsPage() {
               </div>
 
               <div className="bg-rose-50/80 rounded-xl shadow-sm p-6 border-l-4 border-rose-400">
-                <div className="font-bold text-rose-700 text-lg mb-2">Fabrics & Home Textiles</div>
+                <div className="font-bold text-rose-700 text-lg mb-2 font-serif">Fabrics & Home Textiles</div>
                 <ul className="list-disc list-inside text-gray-700 text-sm space-y-1">
                   <li>Cotton, Silk, Linen, and Blended Fabrics</li>
                   <li>Shawls, Stoles & Dupattas</li>
@@ -146,7 +146,6 @@ export default function AboutUsPage() {
                 </ul>
               </div>
             </div> */}
-
          
           </div>
         </div>
@@ -155,13 +154,13 @@ export default function AboutUsPage() {
       {/* Vision & Mission below main section, updated for Textiles */}
       <section className="max-w-7xl mx-auto px-6 py-16 grid sm:grid-cols-2 gap-7">
         <div className="bg-lime-50/70 rounded-xl shadow p-6 border-l-4 border-lime-400 flex flex-col mb-8 sm:mb-0">
-          <h3 className="text-lime-600 font-bold text-lg mb-2">Our Vision</h3>
+          <h3 className="text-lime-600 font-bold text-lg mb-2 font-serif">Our Vision</h3>
           <p className="text-gray-700 text-base">
             To be a global frontrunner in supplying authentic, innovative, and sustainable Indian textile products, while empowering artisans and upholding India's textile traditions in every thread.
           </p>
         </div>
         <div className="bg-white rounded-xl shadow p-6 border-l-4 border-lime-400 flex flex-col">
-          <h3 className="text-lime-600 font-bold text-lg mb-2">Our Mission</h3>
+          <h3 className="text-lime-600 font-bold text-lg mb-2 font-serif">Our Mission</h3>
           <ul className="list-disc pl-5 text-gray-700 space-y-1 text-base">
             <li>Bringing the best of Indian textiles—fabrics, garments, and home decor—to international clients</li>
             <li>Promoting ethical sourcing, quality control, and transparent processes across the textile supply chain</li>

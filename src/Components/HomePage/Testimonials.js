@@ -115,12 +115,12 @@ export default function TestimonialComponent() {
           ${animate ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}
         `}
       >
-        <p className="text-lime-600 font-semibold text-lg flex items-center gap-3 justify-center">
+        <p className="text-lime-600 font-semibold text-lg flex items-center gap-3 justify-center font-serif">
           <span className="w-10 h-[2px] bg-lime-500"></span>
           Textile Clients
           <span className="w-10 h-[2px] bg-lime-500"></span>
         </p>
-        <h2 className="text-4xl md:text-5xl font-extrabold text-green-900 mt-3">
+        <h2 className="text-4xl md:text-5xl font-extrabold text-green-900 mt-3 font-serif">
           What Our Textile Clients Say
         </h2>
         <div className="mt-3 flex justify-center flex-wrap gap-3">
@@ -214,7 +214,7 @@ function TestimonialCard({ item, animate, direction, index }) {
       <div>
         <p className="text-gray-600 leading-relaxed">{item.text}</p>
 
-        <h3 className="text-green-900 font-extrabold text-xl mt-6">{item.clientName}</h3>
+        <h3 className="text-green-900 font-extrabold text-xl mt-6 font-serif">{item.clientName}</h3>
         <p className="text-gray-500 text-sm">{item.role}</p>
         {/* Highlight the supplied products: */}
         <div className="flex gap-2 mt-2">

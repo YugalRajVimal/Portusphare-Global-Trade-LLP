@@ -66,11 +66,11 @@ export default function AboutSection() {
           `}
         >
           {/* Section Title */}
-          <p className="text-lime-600 font-semibold text-lg flex items-center gap-2">
+          <p className="text-lime-600 font-serif font-semibold text-lg flex items-center gap-2">
             Who We Are <span className="w-10 h-1 bg-lime-500 inline-block rounded"></span>
           </p>
 
-          <h2 className="text-4xl md:text-5xl font-extrabold text-green-900 leading-tight mt-3">
+          <h2 className="text-4xl md:text-5xl font-serif font-extrabold text-green-900 leading-tight mt-3">
             India’s Premier Textile Exporter<br className="hidden sm:inline" /> to Global Markets
           </h2>
 
@@ -81,7 +81,7 @@ export default function AboutSection() {
 
           {/* Vision */}
           <div className="mt-7">
-            <h3 className="text-green-900 font-bold text-xl mb-1">Our Vision</h3>
+            <h3 className="text-green-900 font-serif font-bold text-xl mb-1">Our Vision</h3>
             <p className="text-gray-700 text-base">
               To be a global beacon of Indian textile innovation, sustainability, and artistry, while elevating the reputation of Indian-made fabrics and garments around the world.
             </p>
@@ -89,7 +89,7 @@ export default function AboutSection() {
 
           {/* Mission */}
           <div className="mt-7">
-            <h3 className="text-green-900 font-bold text-xl mb-1">Our Mission</h3>
+            <h3 className="text-green-900 font-serif font-bold text-xl mb-1">Our Mission</h3>
             <ul className="list-disc pl-6 text-gray-700 space-y-2 text-base">
               <li>To export premium textiles that seamlessly blend tradition and modernity</li>
               <li>To uphold ethical sourcing, sustainable manufacturing, and uncompromising quality</li>
@@ -100,7 +100,7 @@ export default function AboutSection() {
 
           {/* Tagline */}
           <div className="mt-7">
-            <h3 className="text-green-900 font-bold text-xl mb-1">Our Tagline</h3>
+            <h3 className="text-green-900 font-serif font-bold text-xl mb-1">Our Tagline</h3>
             <blockquote className="border-l-4 border-lime-500 pl-4 italic text-lime-700 text-lg">
               “Weaving Indian Excellence for the World”
             </blockquote>
@@ -115,7 +115,7 @@ export default function AboutSection() {
               Contact Us &rarr;
             </a>
             <div className="flex flex-col">
-              <p className="text-green-900 font-bold text-lg">Portusphere Global Trade LLP</p>
+              <p className="text-green-900 font-serif font-bold text-lg">Portusphere Global Trade LLP</p>
               <p className="text-gray-700 text-sm">B6/908, Supertech Eco Village -2, Greater Noida West</p>
               <a
                 href="tel:+919560365050"

@@ -135,7 +135,7 @@ export default function HeroSection() {
     },
     heading: (
       <>
-        Welcome to <span className="text-lime-600">Portusphere Global Trade LLP</span>
+        Welcome to <span className="text-lime-600 font-serif">Portusphere Global Trade LLP</span>
       </>
     ),
     description: (
@@ -240,7 +240,7 @@ export default function HeroSection() {
               {division.badge.text}
             </span>
           </div>
-          <h1 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl font-extrabold text-green-900 leading-tight drop-shadow-sm">
+          <h1 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl font-extrabold text-green-900 leading-tight drop-shadow-sm font-serif">
             {division.heading}
           </h1>
           <p className="text-base xs:text-lg text-gray-700/90 max-w-lg">{division.description}</p>
@@ -350,7 +350,7 @@ export default function HeroSection() {
             </div>
             {/* Division indicator, always Textile */}
             <div
-              className="absolute top-2 right-3 xs:right-4 text-xs px-3 py-1 rounded-full bg-white/70 border font-semibold shadow-sm tracking-wide border-lime-400 text-lime-600"
+              className="absolute top-2 right-3 xs:right-4 text-xs px-3 py-1 rounded-full bg-white/70 border font-semibold shadow-sm tracking-wide border-lime-400 text-lime-600 font-serif"
             >
               Textile
             </div>
