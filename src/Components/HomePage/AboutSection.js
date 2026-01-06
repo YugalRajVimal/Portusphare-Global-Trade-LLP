@@ -26,9 +26,9 @@ export default function AboutSection() {
             `}
           >
             <img
-              src="/textile.jpg"
+              src="/textile2.webp"
               className="w-full h-[420px] md:h-[480px] object-cover rounded-[120px_0_120px_0] shadow-lg"
-              alt="About Portusphere Global Trade LLP - Textile Division"
+              alt="Fine Indian Textile Exports by Portusphere Global Trade LLP"
             />
           </div>
 
@@ -41,17 +41,17 @@ export default function AboutSection() {
             `}
           >
             <img
-              src="/Farmer.png"
+              src="/textile3.jpg"
               className="w-56 h-56 md:w-64 md:h-64 rounded-full object-cover shadow-xl border-4 border-white"
-              alt="Indian agriculture and farmer support"
+              alt="Textiles Crafted in India"
             />
 
             {/* Floating Card */}
             <div className="absolute -bottom-6 left-4 md:left-10 bg-white shadow-xl rounded-xl px-6 py-4 flex items-center gap-4">
-              <div className="bg-lime-500 p-4 rounded-lg text-white text-2xl">🌱</div>
+              <div className="bg-lime-500 p-4 rounded-lg text-white text-2xl">🧵</div>
               <div>
-                <p className="font-bold text-gray-700">Empowering</p>
-                <p className="font-bold text-gray-700">Indian Farmers & Artisans</p>
+                <p className="font-bold text-gray-700">Celebrating</p>
+                <p className="font-bold text-gray-700">Indian Textile Heritage</p>
               </div>
             </div>
           </div>
@@ -71,19 +71,19 @@ export default function AboutSection() {
           </p>
 
           <h2 className="text-4xl md:text-5xl font-extrabold text-green-900 leading-tight mt-3">
-            Leaders in Agri-Products & Textile Exports<br className="hidden sm:inline" /> from India
+            India’s Premier Textile Exporter<br className="hidden sm:inline" /> to Global Markets
           </h2>
 
           {/* Main Content Intro */}
           <p className="text-gray-700 mt-6 text-lg">
-            Portusphere Global Trade LLP is a dynamic, trust-driven export house dedicated to delivering both high-quality agricultural products and world-class Indian textiles to domestic and global markets. We bridge India's rich traditions—from farm to fabric—combining modern technology and responsible sourcing with our deep-rooted commitment to sustainability and excellence.
+            At Portusphere Global Trade LLP, our <span className="font-semibold text-lime-600">Textile Division</span> is dedicated to presenting the finest fabrics, garments, and home textiles crafted and curated from the heart of India. We pride ourselves on seamlessly blending India’s storied textile traditions with advanced manufacturing and world-class quality standards. From organic cotton to contemporary blends, we are committed to delivering excellence, creativity, and reliability to our global partners.
           </p>
 
           {/* Vision */}
           <div className="mt-7">
             <h3 className="text-green-900 font-bold text-xl mb-1">Our Vision</h3>
             <p className="text-gray-700 text-base">
-              To become a global leader in supplying clean, authentic Indian agri-products and premium textiles, while uplifting the farming and artisan communities across India.
+              To be a global beacon of Indian textile innovation, sustainability, and artistry, while elevating the reputation of Indian-made fabrics and garments around the world.
             </p>
           </div>
 
@@ -91,10 +91,10 @@ export default function AboutSection() {
           <div className="mt-7">
             <h3 className="text-green-900 font-bold text-xl mb-1">Our Mission</h3>
             <ul className="list-disc pl-6 text-gray-700 space-y-2 text-base">
-              <li>To deliver agricultural produce and textile goods that meet the highest quality and ethical standards</li>
-              <li>To create sustainable income opportunities and empowerment for both farmers and artisans</li>
-              <li>To build long-term business relationships founded on trust, value, and innovation</li>
-              <li>To actively promote India’s agricultural and textile excellence on the world stage</li>
+              <li>To export premium textiles that seamlessly blend tradition and modernity</li>
+              <li>To uphold ethical sourcing, sustainable manufacturing, and uncompromising quality</li>
+              <li>To empower Indian artisans, weavers, and textile workers through fair opportunities</li>
+              <li>To build lasting partnerships by consistently exceeding global textile expectations</li>
             </ul>
           </div>
 
@@ -102,7 +102,7 @@ export default function AboutSection() {
           <div className="mt-7">
             <h3 className="text-green-900 font-bold text-xl mb-1">Our Tagline</h3>
             <blockquote className="border-l-4 border-lime-500 pl-4 italic text-lime-700 text-lg">
-              “From Our Land & Looms To The World”
+              “Weaving Indian Excellence for the World”
             </blockquote>
           </div>
 

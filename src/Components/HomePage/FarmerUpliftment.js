@@ -1,16 +1,16 @@
 import { useEffect, useState } from "react";
 import { FaCheckCircle } from "react-icons/fa";
 
-const points = [
-  "Fair and assured pricing",
-  "Training in modern farming techniques",
-  "Support in seeds, fertilizers, and crop consultation",
-  "Direct procurement at farm gate to reduce middlemen",
-  "Guidance for organic and chemical-free farming",
-  "Access to global markets for better earning potential",
+const textilePoints = [
+  "Fair compensation for skilled artisans and weavers",
+  "Training in contemporary and traditional textile techniques",
+  "Support in sourcing quality raw materials and advanced machinery",
+  "Direct procurement from producer clusters to eliminate exploitative intermediaries",
+  "Guidance for sustainable and eco-friendly textile production",
+  "Exposure to global markets for enhanced recognition and income",
 ];
 
-export default function FarmerUpliftment() {
+export default function TextileEmpowerment() {
   const [animate, setAnimate] = useState(false);
 
   useEffect(() => {
@@ -28,8 +28,8 @@ export default function FarmerUpliftment() {
           `}
         >
           <img
-            src="/Farmer.png"
-            alt="Portusphere Farmer Upliftment Program"
+            src="/textile3.jpg"
+            alt="Empowering Indian Textile Artisans"
             className="w-full h-full object-cover"
           />
         </div>
@@ -42,21 +42,21 @@ export default function FarmerUpliftment() {
           `}
         >
           <p className="text-lime-600 font-semibold text-lg flex items-center gap-3">
-            3.&nbsp;Our Farmer Upliftment Program
+            3.&nbsp;Empowering Textile Artisans
             <span className="w-14 h-[2px] bg-lime-600"></span>
           </p>
 
           <h2 className="text-4xl md:text-5xl font-extrabold text-green-900 leading-tight mt-3">
-            Empowering Farmers for a Better Tomorrow
+            Uplifting India's Textile Community
           </h2>
 
           <p className="text-gray-600 mt-6 leading-relaxed">
-            Farmers are the backbone of Portusphere Global Trade LLP. Through our Farmer Upliftment Program, we support agricultural families with:
+            Indian textile artisans and workers form the core of Portusphere Global Trade LLP. Our initiatives uplift textile communities through:
           </p>
 
           {/* Bullet Points */}
           <ul className="mt-8 space-y-4">
-            {points.map((point, idx) => (
+            {textilePoints.map((point, idx) => (
               <li key={idx} className="flex items-start gap-4">
                 <FaCheckCircle className="w-6 h-6 text-lime-600 flex-shrink-0" />
                 <span className="text-gray-700">{point}</span>
@@ -65,7 +65,7 @@ export default function FarmerUpliftment() {
           </ul>
 
           <p className="text-green-900 font-semibold mt-8 text-lg">
-            By partnering with us, farmers gain stability, improved productivity, and increased profits.
+            By connecting artisans with new technologies and global markets, we enable sustainable growth, skill development, and greater prosperity.
           </p>
         </div>
       </div>

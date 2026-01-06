@@ -1,256 +1,152 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 
-export default function TextilePage() {
+const images = [
+  { src: "/Products/dryfruits.jpg", alt: "Dry Fruits" },
+  { src: "/Products/fruits.jpg", alt: "Fruits" },
+  { src: "/Products/pulces.jpeg", alt: "Pulses" },
+  { src: "/Products/spices.jpg", alt: "Spices" },
+  { src: "/Products/vegies.webp", alt: "Vegetables" }
+];
+
+export default function AgriculturePage() {
+  const [activeIndex, setActiveIndex] = useState(0);
+  const timeoutRef = useRef();
+
+  useEffect(() => {
+    timeoutRef.current = setTimeout(() => {
+      setActiveIndex((prev) => (prev + 1) % images.length);
+    }, 2000);
+    return () => clearTimeout(timeoutRef.current);
+  }, [activeIndex]);
+
   return (
-     
-    <section className="relative w-full  mt-16  pb-10  xs:mt-28 sm:mt-28 pt-10  overflow-hidden bg-gradient-to-b from-[#fcfefd] via-[#f5fce8] to-white ">
-    <div className="flex justify-center mb-8 px-4">
-      <img
-        src="/textileLogo.jpeg"
-        alt="Textile Division Banner"
-        className="mx-auto rounded-xl shadow-lg min-w-md  max-w-full h-auto"
-        style={{ maxHeight: "240px", objectFit: "cover" }}
-      />
-    </div>
-       
-    <div className="flex items-center gap-3 mb-6 justify-center text-center w-full">
-      <span className="w-10 h-1.5 bg-lime-500 rounded-full inline-block" />
-      <span className="text-lime-900 font-extrabold tracking-widest uppercase text-3xl sm:text-5xl">Textile & Cloth Division
-      </span>
-      <span className="w-10 h-1.5 bg-lime-500 rounded-full inline-block" />
-    </div>
-      <div className="max-w-4xl mx-auto px-4 sm:px-8">
+    <section className="relative w-full mt-16 xs:mt-28 sm:mt-28 overflow-hidden bg-gradient-to-b from-[#fcfefd] via-[#f5fce8] to-white">
+
+      {/* ================= HERO BANNER CAROUSEL (FULL WIDTH) ================= */}
+      <div className="w-full px-4 py-10">
+        <div className="relative w-full max-h-[320px] h-[200px] sm:h-[320px] rounded-2xl shadow-xl overflow-hidden">
+          {images.map((img, idx) => (
+            <img
+              key={img.src}
+              src={img.src}
+              alt={img.alt}
+              className={`
+                absolute left-0 top-0 w-full h-full object-cover rounded-2xl transition-opacity duration-700
+                ${activeIndex === idx ? "opacity-100 z-10" : "opacity-0 z-0"}
+              `}
+              style={{
+                transitionProperty: "opacity"
+              }}
+            />
+          ))}
+        </div>
+      </div>
+
+      {/* ================= TITLE ================= */}
+      <div className="flex items-center gap-4 mb-10 justify-center text-center">
+        <span className="w-12 h-1.5 bg-lime-500 rounded-full" />
+        <h1 className="text-lime-900 font-extrabold tracking-wide uppercase text-3xl sm:text-5xl">
+          Agriculture & Food Products
+        </h1>
+        <span className="w-12 h-1.5 bg-lime-500 rounded-full" />
+      </div>
+
+      {/* ================= CONTENT WRAPPER ================= */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-8">
+
         {/* Header */}
-        <div className="text-center mb-10">
-       
-          <h2 className="text-xl sm:text-2xl font-semibold text-green-700 mb-1">
+        <div className="text-center mb-16">
+          <h2 className="text-2xl sm:text-3xl font-semibold text-green-700">
             Portusphere Global Trade LLP
           </h2>
-          <p className="text-lg text-green-800 font-medium mb-2">
-            Weaving Quality, Delivering Trust
+          <p className="text-lg text-green-800 font-medium mt-2">
+            Cultivating Quality, Delivering Freshness
           </p>
-          <p className="text-gray-700 max-w-2xl mx-auto mt-4">
-            At Portusphere Global Trade LLP, our Textile & Cloth division represents India’s rich weaving heritage combined with modern quality standards. We source, process, and supply premium textiles and fabrics for domestic and international markets, ensuring consistency, durability, and ethical sourcing.
+          <p className="text-gray-700 max-w-3xl mx-auto mt-6 leading-relaxed">
+            At Portusphere Global Trade LLP, our Agriculture & Food Products division brings the bounty of Indian farms to global markets. We source, process, and supply premium-quality fresh vegetables, fruits, spices, grains, and pulses—ensuring freshness, traceability, and ethical sourcing.
           </p>
-        </div>
-        <div className="flex justify-center mb-8">
-          <div className="w-20 border-t-2 border-lime-500"></div>
         </div>
 
-        {/* Our Textile Range */}
-        <section>
-          <h3 className="text-2xl font-bold text-lime-800 mb-6 text-center">
-            Our Textile Range
+        {/* ================= AGRICULTURE RANGE ================= */}
+        <section className="mb-20">
+          <h3 className="text-3xl font-bold text-lime-800 mb-10 text-center">
+            Our Agricultural Range
           </h3>
-          <div className="grid gap-8 md:grid-cols-2">
-            {/* Cotton Fabrics */}
-            <div className="bg-lime-50 rounded-2xl shadow p-6">
-              <div className="flex items-center mb-2">
-                <span className="text-2xl mr-2">🧵</span>
-                <span className="font-bold text-lime-900 text-lg">
-                  Cotton Fabrics
-                </span>
+
+          <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
+            {[
+              {
+                title: "Fresh Vegetables",
+                icon: "🥒",
+                bg: "bg-lime-50",
+                items: ["Onion", "Potato", "Green Chilli", "Lemon", "Drumstick"],
+              },
+              {
+                title: "Fresh Fruits",
+                icon: "🍋",
+                bg: "bg-emerald-50",
+                items: ["Mango", "Pomegranate", "Banana"],
+              },
+              {
+                title: "Indian Spices",
+                icon: "🌶️",
+                bg: "bg-orange-50",
+                items: ["Turmeric", "Chilli", "Cumin", "Coriander"],
+              },
+              {
+                title: "Grains & Pulses",
+                icon: "🌾",
+                bg: "bg-lime-100",
+                items: ["Rice", "Wheat", "Dal (Pulses)"],
+              },
+            ].map((item, idx) => (
+              <div
+                key={idx}
+                className={`${item.bg} rounded-2xl shadow-md p-6 hover:shadow-xl transition`}
+              >
+                <div className="flex items-center mb-4">
+                  <span className="text-3xl mr-3">{item.icon}</span>
+                  <h4 className="font-bold text-lime-900 text-xl">
+                    {item.title}
+                  </h4>
+                </div>
+                <ul className="list-disc list-inside text-gray-700 space-y-1">
+                  {item.items.map((i) => (
+                    <li key={i}>{i}</li>
+                  ))}
+                </ul>
               </div>
-              <ul className="list-disc list-inside ml-3 text-gray-700 space-y-1">
-                <li>100% Pure Cotton</li>
-                <li>Organic &amp; Sustainable Cotton</li>
-                <li>Cambric, Poplin, Voile, Slub Cotton</li>
-                <li>Suitable for garments, uniforms &amp; home textiles</li>
-              </ul>
-            </div>
-            {/* Blended & Synthetic Fabrics */}
-            <div className="bg-emerald-50 rounded-2xl shadow p-6">
-              <div className="flex items-center mb-2">
-                <span className="text-2xl mr-2">🧶</span>
-                <span className="font-bold text-lime-900 text-lg">
-                  Blended &amp; Synthetic Fabrics
-                </span>
-              </div>
-              <ul className="list-disc list-inside ml-3 text-gray-700 space-y-1">
-                <li>Cotton Blends</li>
-                <li>Polyester &amp; Viscose Fabrics</li>
-                <li>Rayon &amp; Lycra Blends</li>
-                <li>Fashion, industrial &amp; upholstery use</li>
-              </ul>
-            </div>
-            {/* Traditional Indian Textiles */}
-            <div className="bg-orange-50 rounded-2xl shadow p-6">
-              <div className="flex items-center mb-2">
-                <span className="text-2xl mr-2">🪡</span>
-                <span className="font-bold text-lime-900 text-lg">
-                  Traditional Indian Textiles
-                </span>
-              </div>
-              <ul className="list-disc list-inside ml-3 text-gray-700 space-y-1">
-                <li>Handloom Fabrics</li>
-                <li>Powerloom Cloth</li>
-                <li>Regional specialty weaves</li>
-                <li>Artisan-supported sourcing</li>
-              </ul>
-            </div>
-            {/* Home Textile Materials */}
-            <div className="bg-lime-100 rounded-2xl shadow p-6">
-              <div className="flex items-center mb-2">
-                <span className="text-2xl mr-2">🧺</span>
-                <span className="font-bold text-lime-900 text-lg">
-                  Home Textile Materials
-                </span>
-              </div>
-              <ul className="list-disc list-inside ml-3 text-gray-700 space-y-1">
-                <li>Bed Linen Fabric</li>
-                <li>Curtains &amp; Upholstery Cloth</li>
-                <li>Towels &amp; Terry Fabrics</li>
-                <li>Cushion &amp; Sofa Fabrics</li>
-              </ul>
-            </div>
+            ))}
           </div>
         </section>
 
-        {/* Divider */}
-        <div className="flex justify-center my-10">
-          <div className="w-28 border-t-2 border-lime-400"></div>
-        </div>
-
-        {/* Quality & Sourcing */}
-        <section className="mb-12">
-          <h3 className="text-2xl font-bold text-lime-800 mb-4 text-center">
-            Quality &amp; Sourcing
+        {/* ================= QUALITY ================= */}
+        <section className="mb-20">
+          <h3 className="text-3xl font-bold text-lime-800 mb-6 text-center">
+            Quality & Sourcing
           </h3>
-          <p className="text-gray-700 max-w-2xl mx-auto mb-5 text-center">
-            We work directly with weavers, textile units, and fabric manufacturers across India to ensure:
-          </p>
-          <ul className="max-w-md mx-auto mb-5 text-green-900 text-base space-y-1">
-            <li className="flex items-center">
-              <span className="text-lime-600 text-lg mr-2">✔</span>
-              Consistent quality standards
-            </li>
-            <li className="flex items-center">
-              <span className="text-lime-600 text-lg mr-2">✔</span>
-              Export-grade finishing
-            </li>
-            <li className="flex items-center">
-              <span className="text-lime-600 text-lg mr-2">✔</span>
-              Ethical &amp; sustainable sourcing
-            </li>
-            <li className="flex items-center">
-              <span className="text-lime-600 text-lg mr-2">✔</span>
-              Competitive pricing
-            </li>
-          </ul>
-          <p className="text-gray-600 text-center">
-            Each batch is inspected for strength, colorfastness, texture, and compliance with buyer requirements.
-          </p>
-        </section>
 
-        {/* Export & Domestic Supply */}
-        <section className="mb-12">
-          <h3 className="text-2xl font-bold text-lime-800 mb-4 text-center">
-            Export &amp; Domestic Supply
-          </h3>
-          <p className="text-gray-700 max-w-2xl mx-auto mb-5 text-center">
-            We cater to:
+          <p className="text-gray-700 max-w-3xl mx-auto mb-8 text-center">
+            We work directly with trusted farmers, FPOs, and suppliers to ensure:
           </p>
-          <ul className="md:grid md:grid-cols-2 gap-2 list-disc list-inside text-green-900 max-w-md mx-auto space-y-1 md:space-y-0 mb-3">
-            <li>Garment Manufacturers</li>
-            <li>Fashion Brands</li>
-            <li>Wholesalers &amp; Retailers</li>
-            <li>Interior &amp; Home Textile Buyers</li>
-            <li>International Importers</li>
-          </ul>
-          <p className="text-gray-600 text-center">
-             Our strong logistics network enables timely deliveries across India and overseas markets.
-          </p>
-        </section>
 
-        {/* Karigar Empowerment */}
-        <div className="flex justify-center mb-8">
-          <div className="w-20 border-t-2 border-lime-400"></div>
-        </div>
-        <section>
-          <h3 className="text-2xl font-bold text-lime-900 mb-4 text-center">Karigar Empowerment</h3>
-          <p className="text-gray-700 max-w-2xl mx-auto text-center">
-            At Portusphere Global Trade LLP, we believe true quality begins with skilled hands. We work directly with local <span className="font-semibold text-green-800">karigars</span>, ensuring fair wages, skill development, and sustainable livelihoods. By empowering artisans, we preserve traditional craftsmanship while delivering premium textiles and cloth to domestic and international markets.
-          </p>
-        </section>
-      </div>
-    <section className="mt-12 px-4">
-      <h3 className="text-3xl md:text-4xl font-bold text-lime-800 mb-6 text-center">
-        Our Products
-      </h3>
-      <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-3 max-w-4xl gap-4 mx-auto ">
-
-        {/* Helper for WhatsApp Lead Button */}
-        {[
-          {
-            name: "Sarees",
-            img: "/sarees.jpeg",
-            alt: "Sarees"
-          },
-          {
-            name: "Blouse",
-            img: "/blouse.jpg",
-            alt: "Blouse"
-          },
-          {
-            name: "Lady Suit",
-            img: "/suit.jpg",
-            alt: "Lady Suit"
-          },
-          {
-            name: "Kurtis",
-            img: "/kurti.jpeg",
-            alt: "Kurtis"
-          },
-          {
-            name: "Shawl",
-            img: "/shawl.jpeg",
-            alt: "Shawl"
-          }
-        ].map((product, idx) => {
-          // WhatsApp phone number (with country code, but no '+')
-          const whatsappNumber = "+919560365050"; // TODO: Replace with your actual WhatsApp number
-          // Custom message
-          const msg =
-            product.name === "And many more"
-              ? encodeURIComponent("Hello, I am interested in learning more about your textile & cloth products at Portusphere Global Trade LLP.")
-              : encodeURIComponent(
-                  `Hello, I am interested in the "${product.name}" products from Textile & Cloth Division at Portusphere Global Trade LLP. Please provide more details.`
-                );
-          const waLink = `https://wa.me/${whatsappNumber}?text=${msg}`;
-          
-          return (
-            <div
-              key={idx}
-              className={`bg-white rounded-xl shadow p-4 flex flex-col items-center ${
-                product.name === "And many more" ? "justify-center" : ""
-              } transition hover:shadow-lg`}
-            >
-              {product.img ? (
-                <img
-                  src={product.img}
-                  alt={product.alt}
-                  className="rounded-lg mb-3  h-60 aspect-[1/1] object-cover border border-lime-100"
-                  loading="lazy"
-                />
-              ) : (
-                <div className="flex items-center justify-center rounded-lg mb-3 w-32 h-32 bg-gradient-to-tr from-lime-100 to-lime-300 text-lime-700 text-5xl">
-                  <span>…</span>
-                </div>
-              )}
-              <span className="text-lime-900 font-semibold text-lg">{product.name}</span>
-              <a
-                href={waLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-4 inline-flex items-center px-4 py-2 bg-lime-500 text-white font-semibold rounded hover:bg-lime-600 transition-shadow shadow focus:outline-none"
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
+            {[
+              "Farm-fresh quality",
+              "Hygienic processing",
+              "Ethical sourcing",
+              "Competitive pricing",
+            ].map((point) => (
+              <div
+                key={point}
+                className="bg-white rounded-xl shadow p-6 text-center text-green-900 font-medium"
               >
-                Enquiry Now
-              </a>
-            </div>
-          );
-        })}
+                ✔ {point}
+              </div>
+            ))}
+          </div>
+        </section>
       </div>
-    </section>
     </section>
   );
 }

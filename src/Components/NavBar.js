@@ -11,10 +11,11 @@ export default function Navbar() {
   const [mobileProductsOpen, setMobileProductsOpen] = useState(false);
 
   const productsLinks = [
-    { label: "Indian Spices", href: "/products/indian-spices" },
-    { label: "Fresh Vegetables", href: "/products/fresh-vegetables" },
-    { label: "Grains & Pulses", href: "/products/grains-pulses" },
-    { label: "Dry Fruits", href: "/products/dry-fruits" },
+    { label: "Sarees", href: "/products/sarees" },
+    { label: "Blouses", href: "/products/blouses" },
+    { label: "Ladies Suits", href: "/products/ladies-suits" },
+    { label: "Kurtis", href: "/products/kurtis" },
+    { label: "Shawls", href: "/products/shawls" },
   ];
 
   const productsMenuRef = useRef(null);
@@ -149,7 +150,7 @@ export default function Navbar() {
             <a className="hover:text-green-700" href="/">Home</a>
             <a className="hover:text-green-700" href="/about">About</a>
             <a className="hover:text-green-700" href="/textile">
-              Textile &amp; Cloth Division
+            Agriculture & Food Products
             </a>
             {/* Products dropdown */}
             <div
@@ -269,7 +270,7 @@ export default function Navbar() {
             className="text-gray-800 text-lg font-medium hover:text-green-700"
             href="/textile"
           >
-            Textile &amp; Cloth Division
+            Agriculture & Food Products
           </a>
           {/* Products Link with expandable submenu */}
           <div>

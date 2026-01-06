@@ -21,24 +21,8 @@ export default function TestimonialComponent() {
     setTimeout(() => setAnimate(true), 150);
   }, []);
 
-  // Testimonials covering BOTH textile and agriculture (not just one)
+  // Testimonials focused on TEXTILE clients only
   const testimonials = [
-    {
-      img: "https://randomuser.me/api/portraits/men/32.jpg",
-      clientName: "Abdul Rahman",
-      role: "Importer, UAE",
-      text: "Excellent quality and timely shipments from Portusphere. Produce always arrives fresh and as promised.",
-      stars: 5,
-      products: ["Agriculture"], // <-- added type for clarity
-    },
-    {
-      img: "https://randomuser.me/api/portraits/women/44.jpg",
-      clientName: "Meena Devi",
-      role: "Partner Farmer, UP",
-      text: "The Farmer Support Program helped me improve my yield and secure fair, assured prices for my vegetables.",
-      stars: 5,
-      products: ["Agriculture"],
-    },
     {
       img: "https://randomuser.me/api/portraits/men/52.jpg",
       clientName: "Rohan S.",
@@ -56,28 +40,44 @@ export default function TestimonialComponent() {
       products: ["Textiles"],
     },
     {
-      img: "https://randomuser.me/api/portraits/men/83.jpg",
-      clientName: "Sanjay Patel",
-      role: "Retailer, Gujarat",
-      text: "Consistent quality and clean packing. Our store customers love the freshness. Highly recommended!",
+      img: "https://randomuser.me/api/portraits/men/14.jpg",
+      clientName: "David Müller",
+      role: "Textile Importer, Germany",
+      text: "The shipment of handloom sarees and scarves from Portusphere was flawless. The textiles reflect authentic Indian craftsmanship and my boutique clients are always eager for more.",
       stars: 5,
-      products: ["Agriculture"],
+      products: ["Textiles"],
     },
     {
-      img: "https://randomuser.me/api/portraits/men/61.jpg",
-      clientName: "Luis Carlos",
-      role: "Distributor, Spain",
-      text: "Seamless export process and friendly team. Sourcing Indian vegetables is now reliable and easy.",
+      img: "https://randomuser.me/api/portraits/women/36.jpg",
+      clientName: "Fatima Noor",
+      role: "Lifestyle Store, UAE",
+      text: "We are consistently impressed by the high-quality fabrics and vibrant designs. The kurta and dupatta sets are customer favorites. Reliable sourcing, time after time.",
       stars: 5,
-      products: ["Agriculture"],
+      products: ["Textiles"],
     },
     {
-      img: "https://randomuser.me/api/portraits/women/21.jpg",
-      clientName: "Natalia Jimenez",
-      role: "Import Manager, Mexico",
-      text: "Both the fresh vegetables and the textiles in our order were of superb quality and precisely matched our expectations. Two divisions, one reliable partner.",
+      img: "https://randomuser.me/api/portraits/men/28.jpg",
+      clientName: "Jean-Paul Rousseau",
+      role: "Boutique Owner, France",
+      text: "From block-printed stoles to silk shawls, the selection is outstanding. My Parisian boutique now features a curated Indian textiles section, thanks to Portusphere.",
       stars: 5,
-      products: ["Agriculture", "Textiles"], // Both!
+      products: ["Textiles"],
+    },
+    {
+      img: "https://randomuser.me/api/portraits/women/49.jpg",
+      clientName: "Keiko Tanaka",
+      role: "Home Textile Importer, Japan",
+      text: "Our collaboration on home linen — table runners and cushion covers — has delighted Japanese clients with rich artistry and soft, high-quality fabrics. Highly recommended.",
+      stars: 5,
+      products: ["Textiles"],
+    },
+    {
+      img: "https://randomuser.me/api/portraits/men/35.jpg",
+      clientName: "Arvind Gupta",
+      role: "Retail Chain, Delhi",
+      text: "Consistent supply, modern and traditional designs, and quality assurance on every batch. Our retail customers rate the sarees and kurtis highly.",
+      stars: 5,
+      products: ["Textiles"],
     },
   ];
 
@@ -117,16 +117,13 @@ export default function TestimonialComponent() {
       >
         <p className="text-lime-600 font-semibold text-lg flex items-center gap-3 justify-center">
           <span className="w-10 h-[2px] bg-lime-500"></span>
-          Our Clients
+          Textile Clients
           <span className="w-10 h-[2px] bg-lime-500"></span>
         </p>
         <h2 className="text-4xl md:text-5xl font-extrabold text-green-900 mt-3">
-          What Our Clients Say
+          What Our Textile Clients Say
         </h2>
         <div className="mt-3 flex justify-center flex-wrap gap-3">
-          <span className="inline-flex items-center bg-lime-100 text-lime-700 text-sm font-semibold rounded-full px-4 py-1">
-            Agriculture
-          </span>
           <span className="inline-flex items-center bg-lime-100 text-lime-700 text-sm font-semibold rounded-full px-4 py-1">
             Textiles
           </span>
@@ -246,7 +243,7 @@ function TestimonialCard({ item, animate, direction, index }) {
    Orbital Clients (Left Side Circles)
 ----------------------------------- */
 function OrbitalClients() {
-  // Use sample user images from randomuser.me and unsplash
+  // Use sample user images from randomuser.me and unsplash, textile-centric
   const clients = [
     "https://randomuser.me/api/portraits/men/95.jpg",
     "https://randomuser.me/api/portraits/women/72.jpg",

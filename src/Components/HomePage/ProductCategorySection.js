@@ -1,111 +1,96 @@
 import { useEffect, useState } from "react";
-import {
-  FaCarrot,
-  FaSeedling,
-  FaLeaf,
-  FaRegLemon,
-} from "react-icons/fa";
 
-// Add 'path' to allow link to each product page
-const productCategories = [
+// Textile product categories - Saree, Blouse, Lady Suit, Kurtis, Shawl, Many More
+const textileCategories = [
   {
-    icon: <FaSeedling className="text-4xl text-lime-600" />,
-    title: "Indian Spices",
-    desc: "Authentic, aromatic, and rich in flavor.",
+    title: "Saree",
+    desc: "Elegant Indian sarees in a variety of weaves, prints, and embroidery — celebrating the artistry of Indian textiles.",
     highlights: [
-      "Turmeric",
-      "Red Chilli",
-      "Cumin",
-      "Coriander",
-      "Garam Masala Blends",
-      "Cardamom",
-      "Black Pepper",
-      "Mustard Seeds",
-      "Fennel Seeds",
-      "Fenugreek",
-      "And many more…",
+      "Kanjeevaram Silk Sarees",
+      "Banarasi Sarees",
+      "Cotton Handloom Sarees",
+      "Chiffon and Georgette Sarees",
+      "Embroidered & Designer Sarees",
+      "Block Print and Regional Varieties",
+      "And many more styles…",
     ],
-    extra: "We ensure clean processing, hygienic packaging, and export-grade standards.",
-    img: "/Products/spices.jpg",
-    badge: undefined,
-    path: "/products/indian-spices",
+    img: "/textiles/saree.jpg",
+    path: "/products/textile/saree",
+    extra: "Customization and export packing available for bulk as well as boutique requests.",
   },
   {
-    icon: <FaCarrot className="text-4xl text-lime-600" />,
-    title: "Fresh Vegetables",
-    desc: "Sourced directly from farms, harvested at perfect maturity.",
+    title: "Blouse",
+    desc: "Blouses matching every taste — from timeless classics to trendy designer creations, tailored for global clients.",
     highlights: [
-      "Onions",
-      "Potatoes",
-      "Tomatoes",
-      "Green Chillies",
-      "Okra",
-      "Drumstick",
-      "Lemon",
-      "Cabbage",
-      "Cauliflower",
-      "Seasonal Vegetables",
+      "Ready-to-wear Embroidered Blouses",
+      "Plain & Printed Blouses",
+      "Handcrafted Designer Blouses",
+      "Satin, Cotton, Silk, and Synthetic Fabrics",
+      "Custom Styles & Sizing",
+      "Work-wear & Occasion Blouses",
+      "And more options…",
     ],
-    extra: "We maintain freshness through cold-chain logistics.",
-    img: "/Products/vegies.webp",
-    badge: undefined,
-    path: "/products/fresh-vegetables",
+    img: "/textiles/blouse.jpg",
+    path: "/products/textile/blouse",
+    extra: "Quality stitching, intricate details, and high versatility in designs.",
   },
   {
-    icon: <FaLeaf className="text-4xl text-lime-600" />,
-    title: "Grains & Pulses",
-    desc: "Premium-quality Indian staples for bulk and retail buyers.",
+    title: "Lady Suit",
+    desc: "Premium lady suits and dress materials crafted to meet the diverse fashion needs around the world.",
     highlights: [
-      "Basmati Rice",
-      "Non-Basmati Rice",
-      "Wheat",
-      "Maize",
-      "Millet",
-      "Pulses",
+      "Salwar Kameez Sets",
+      "Unstitched Dress Materials",
+      "Embroidered & Printed Suits",
+      "Anarkali & Churidar Styles",
+      "Trendy Palazzo & Pant Suits",
+      "Cotton, Chiffon, Silk, Georgette Materials",
     ],
-    extra: "Packed with nutrition, purity, and consistency.",
-    img: "/Products/pulces.jpeg",
-    badge: undefined,
-    path: "/products/grains-pulses",
+    img: "/textiles/ladysuit.jpg",
+    path: "/products/textile/ladysuit",
+    extra: "Fabrics suited for comfort, durability, and elegance for all occasions.",
   },
   {
-    icon: <FaRegLemon className="text-4xl text-lime-600" />,
-    title: "Dry Fruits",
-    desc: "Finest quality dry fruits, handpicked for freshness and taste.",
+    title: "Kurtis",
+    desc: "Versatile Kurtis for casual, festive, and office wear—fusing Indian tradition with contemporary fashion.",
     highlights: [
-      "Cashew Nuts",
-      "Almonds",
-      "Pistachios",
-      "Raisins",
-      "Walnuts",
-      "Dried Figs",
-      "Dates",
-      "Apricots",
-      "Anjeer",
-      "Mixed Dry Fruit Packs",
+      "Straight, A-line, Flared, and Asymmetric Kurtis",
+      "Embroidered & Printed Patterns",
+      "Cotton, Rayon, Silk Blend, Georgette",
+      "Designer, Festive, and Everyday Collections",
+      "Custom Colors & Sizes",
     ],
-    extra: "Hygienically packed to preserve natural nutrition and flavor.",
-    img: "/Products/dryfruits.jpg",
-    badge: undefined,
-    path: "/products/dry-fruits",
+    img: "/textiles/kurtis.jpg",
+    path: "/products/textile/kurtis",
+    extra: "Available for private label and wholesale programs.",
   },
-  // ---- Textile & Cloth Division ----
   {
-    
-    title: "Textiles & Cloth",
-    desc: "Quality textiles reflecting India’s rich weaving heritage.",
+    title: "Shawl",
+    desc: "Luxurious shawls and stoles drawing on the rich traditions of Indian textile art.",
     highlights: [
-      "Cotton Fabrics (100% Pure, Organic, Cambric, Poplin, Voile, Slub Cotton)",
-      "Blended & Synthetic Fabrics (Cotton Blends, Polyester, Rayon, Lycra)",
-      "Traditional Indian Textiles (Handloom, Powerloom, Regional Specialties)",
-      "Home Textile Materials (Bed Linen, Curtains, Upholstery, Towels, Terry Fabrics)",
-      "Sarees, Kurtis, Shawls, Lady Suit, Blouse – and more garment-ready products",
+      "Pashmina & Wool Shawls",
+      "Hand-embroidered Kashmiri Shawls",
+      "Silk & Modal Stoles",
+      "Digital Prints & Jacquard Weaves",
+      "Plain, Patterned & Occasion Shawls",
     ],
-    extra:
-      "Direct partnerships with weavers and manufacturers ensuring consistent quality, ethical sourcing, and artisan empowerment.",
-    img: "/textileLogo.jpeg",
-    badge: "",
-    path: "/products/textile", // Adjust path as needed
+    img: "/textiles/shawl.jpg",
+    path: "/products/textile/shawl",
+    extra: "World-class finishing and packaging. Bulk & gifting orders serviced globally.",
+  },
+  {
+    title: "And Many More",
+    desc: "Explore our extended textile portfolio for every apparel and home decor requirement.",
+    highlights: [
+      "Dupatta & Scarves",
+      "Home Textile: Bedlinen, Curtains, Table Linen",
+      "Ready Garments: Suit Sets, Skirts, Pants, Jackets",
+      "Menswear Fabrics & Regional Textiles",
+      "Towels, Terry, and Institutional Textiles",
+      "Custom Orders & Sourcing Solutions",
+    ],
+    img: "/textiles/more-textiles.jpg",
+    path: "/products/textile",
+    extra: "Partner with us for made-to-order, OEM, or signature collections. Enquire for details.",
   },
 ];
 
@@ -128,18 +113,21 @@ export default function ProductCategorySection() {
       >
         <p className="text-lime-600 font-semibold text-lg flex items-center justify-center gap-3">
           <span className="w-10 h-[2px] bg-lime-500"></span>
-          <span role="img" aria-label="apple">🍎</span> OUR PRODUCTS
+           OUR TEXTILE CATEGORIES
           <span className="w-10 h-[2px] bg-lime-500"></span>
         </p>
 
         <h2 className="text-4xl md:text-5xl font-extrabold text-green-900 mt-3">
-          Product Categories
+          Textile Product Categories
         </h2>
+        <p className="text-gray-600 text-base mt-3 max-w-2xl mx-auto">
+          Discover the diverse range of Indian textile products we offer, crafted to global standards. From elegant sarees and kurtis to premium shawls and blouses — explore everything under one roof.
+        </p>
       </div>
 
       {/* PRODUCT CARDS */}
       <div className="max-w-7xl mx-auto px-6 mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-10">
-        {productCategories.map((cat, i) => (
+        {textileCategories.map((cat, i) => (
           <div
             key={cat.title}
             className={`
@@ -150,17 +138,21 @@ export default function ProductCategorySection() {
             style={{ transitionDelay: `${200 + i * 120}ms` }}
           >
             <div>
-              {/* IMAGE (decorative, optional, fallback to icon) */}
               <a href={cat.path} className="block focus:outline-none focus:ring-2 focus:ring-lime-400 rounded-full">
                 <div className="relative mb-8 w-full flex justify-center items-center">
                   <div className="w-20 h-20 rounded-full bg-lime-50 flex items-center justify-center shadow-lg overflow-hidden">
                     {cat.img
                       ? <img src={cat.img} alt={cat.title} className="object-cover w-20 h-20" />
-                      : cat.icon}
+                      : (
+                        <span
+                          className="text-3xl text-lime-600"
+                          role="img"
+                          aria-label="textile"
+                        >🧵</span>
+                      )}
                   </div>
-                  {/* Optionally overlay icon above image */}
                   <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-                    <span className="opacity-80">{cat.icon}</span>
+                    <span className="opacity-80 text-2xl" role="img" aria-label="textile">🧵</span>
                   </div>
                 </div>
               </a>
@@ -179,9 +171,6 @@ export default function ProductCategorySection() {
                 <div className="text-gray-700 text-xs text-center mb-2">{cat.extra}</div>
               )}
               <div className="flex-1"></div>
-              {cat.badge && (
-                <div className="mt-4 text-xs text-lime-800 font-semibold text-center tracking-wide">{cat.badge}</div>
-              )}
             </div>
             <div className="mt-6 flex justify-center">
               <a
@@ -190,22 +179,18 @@ export default function ProductCategorySection() {
               >
                 View {cat.title}
               </a>
-             
             </div>
           </div>
         ))}
-
-
-
       </div>
       <div className="flex justify-center mt-10 mx-auto">
-  <a
-    href="/products"
-    className="rounded-full mx-auto border-2 border-lime-500 text-lime-700 px-10 py-4 font-bold text-lg bg-white hover:bg-lime-50 transition shadow-lg w-full max-w-xs text-center"
-  >
-    All Products
-  </a>
-</div>
+        <a
+          href="/products/textile"
+          className="rounded-full mx-auto border-2 border-lime-500 text-lime-700 px-10 py-4 font-bold text-lg bg-white hover:bg-lime-50 transition shadow-lg w-full max-w-xs text-center"
+        >
+          All Textile Products
+        </a>
+      </div>
     </section>
   );
 }
