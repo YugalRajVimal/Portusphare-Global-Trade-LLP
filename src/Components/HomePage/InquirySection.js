@@ -55,7 +55,7 @@ export default function CTAInquirySection() {
             <div className="flex items-start gap-4">
               <FaEnvelope className="w-6 h-6 md:w-8 md:h-8  text-lime-600" />
               <p className="text-green-900 font-medium">
-                support@domain.com
+                contact@portusphere.com
               </p>
             </div>
           </div>

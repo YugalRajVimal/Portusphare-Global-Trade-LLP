@@ -181,7 +181,7 @@ export default function Footer() {
           <ul className="space-y-4 text-gray-300 text-sm">
             <li className="flex gap-2 items-start">
               <FaEnvelope className="mt-1 text-lime-400 shrink-0 text-lg" />
-              <span>support@domain.com</span>
+              <span>contact@portusphere.com</span>
             </li>
             <li className="flex gap-2 items-start">
               <FaPhoneAlt className="mt-1 text-lime-400 shrink-0 text-lg" />
