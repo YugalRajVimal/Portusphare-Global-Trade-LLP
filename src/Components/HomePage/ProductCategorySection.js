@@ -78,19 +78,19 @@ const textileCategories = [
     extra: "World-class finishing and packaging. Bulk & gifting orders serviced globally.",
   },
   {
-    title: "And Many More",
-    desc: "Explore our extended textile portfolio for every apparel and home decor requirement.",
+    title: "Bedsheets",
+    desc: "Premium bedsheets in a variety of fabrics, prints, and sizes designed to enhance every bedroom and living space.",
     highlights: [
-      "Dupatta & Scarves",
-      "Home Textile: Bedlinen, Curtains, Table Linen",
-      "Ready Garments: Suit Sets, Skirts, Pants, Jackets",
-      "Menswear Fabrics & Regional Textiles",
-      "Towels, Terry, and Institutional Textiles",
-      "Custom Orders & Sourcing Solutions",
+      "100% Cotton Bedsheets",
+      "Satin, Percale & Tencel Options",
+      "Single, Double, Queen & King Sizes",
+      "Printed, Solid & Embroidered Styles",
+      "Custom Branding & Private Label",
+      "Bulk & Hospitality Orders Available",
     ],
-   
-    path: "/products",
-    extra: "Partner with us for made-to-order, OEM, or signature collections. Enquire for details.",
+    img: "/Products/bedsheets.jpg",
+    path: "/products/bedsheets",
+    extra: "High thread count, colorfastness, and packaging as per export standards. Contact us for catalogue or OEM options.",
   },
 ];
 

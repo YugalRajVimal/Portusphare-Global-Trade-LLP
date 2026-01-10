@@ -9,7 +9,7 @@ import AboutUsPage from './Pages/AboutUsPage';
 import ProductsPage from './Pages/ProductsPage';
 import SeperateProductPage from './Pages/SeperateProductPage';
 import TextilePage from './Pages/TextilePage';
-import { FaCarrot, FaLeaf, FaRegLemon, FaSeedling } from 'react-icons/fa';
+import { FaBed, FaCarrot, FaLeaf, FaRegLemon, FaSeedling } from 'react-icons/fa';
 
 // Per ProductsPage.js (context), productCategories:
 const productCategories = [
@@ -93,6 +93,22 @@ const productCategories = [
     extra: "Soft, elegant, and perfect for gifting or personal use.",
     img: "/Products/shawl.jpg",
     path: "/products/shawls",
+  },
+  {
+    icon: <FaBed className="text-4xl text-lime-600" />, // Bedsheets
+    title: "Bedsheets",
+    desc: "Premium bedsheets in a variety of fabrics, prints, and sizes for comfortable living.",
+    highlights: [
+      "100% Cotton Bedsheets",
+      "Satin & Percale Options",
+      "Single, Double, Queen & King Sizes",
+      "Printed & Embroidered Styles",
+      "Custom Branding",
+      "Hospitality Bulk Orders",
+    ],
+    extra: "High thread count, colorfastness, and export-quality packaging available.",
+    img: "/Products/bedsheets.jpg",
+    path: "/products/bedsheets",
   },
 ];
 

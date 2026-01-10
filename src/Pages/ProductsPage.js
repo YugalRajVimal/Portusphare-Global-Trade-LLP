@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { FaCarrot, FaSeedling, FaLeaf, FaRegLemon } from "react-icons/fa";
+import { FaCarrot, FaSeedling, FaLeaf, FaRegLemon, FaBed } from "react-icons/fa";
 
 // Add a "path" property for each category for linking
 const productCategories = [
@@ -83,6 +83,22 @@ const productCategories = [
     extra: "Soft, elegant, and perfect for gifting or personal use.",
     img: "/Products/shawl.jpg",
     path: "/products/shawls",
+  },
+  {
+    icon: <FaBed className="text-4xl text-lime-600" />, // Bedsheets
+    title: "Bedsheets",
+    desc: "Premium bedsheets in a variety of fabrics, prints, and sizes for comfortable living.",
+    highlights: [
+      "100% Cotton Bedsheets",
+      "Satin & Percale Options",
+      "Single, Double, Queen & King Sizes",
+      "Printed & Embroidered Styles",
+      "Custom Branding",
+      "Hospitality Bulk Orders",
+    ],
+    extra: "High thread count, colorfastness, and export-quality packaging available.",
+    img: "/Products/bedsheets.jpg",
+    path: "/products/bedsheets",
   },
 ];
 
